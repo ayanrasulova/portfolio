@@ -50,8 +50,8 @@
   }
 }
 body {
-  background: #030412;
-  /* font-family: "Funnel Display", sans-serif; */
+  background: #0d0e12; /* 030412 */
+  /*ALTERNATIVE FONT font-family: "Funnel Display", sans-serif; */
   font-family: "Kode Mono", monospace;
   color: white;
   scroll-behavior: smooth;
