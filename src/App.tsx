@@ -1,5 +1,4 @@
 import React from "react";
-import Message from "./message"; // import from message (. means current folder)
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 
