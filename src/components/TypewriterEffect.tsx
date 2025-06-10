@@ -2,12 +2,14 @@
 
 import { twMerge } from "tailwind-merge";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const TypewriterEffect = ({
   words,
   className,
   cursorClassName,
+  delay = 0,
+  continue: shouldContinue = false, // NEW: continue prop
 }: {
   words: {
     text: string;
@@ -15,125 +17,68 @@ export const TypewriterEffect = ({
   }[];
   className?: string;
   cursorClassName?: string;
+  delay?: number;
+  continue?: boolean; // NEW: continue prop
 }) => {
-  // Combine all words into a single string
   const fullText = words.map((word) => word.text).join(" ");
-  // Index of the current character being shown
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
-  // Text to display: from start up to the current character
   const displayText = useTransform(rounded, (latest) => fullText.slice(0, latest));
 
-  // Animation effect
-  useEffect(() => {
-    const controls = animate(count, fullText.length, {
-      type: "tween",
-      duration: 3, // Adjust as needed for speed
-      ease: "easeInOut",
-    });
-    return controls.stop;
-  }, [fullText]);
+  // State to control when to show the cursor
+  const [showCursor, setShowCursor] = useState(delay === 0);
 
-  // Apply per-word class (this is a simple approach; for per-character, see below)
-  // For per-character classes, you would need a more complex solution
+  useEffect(() => {
+    let cursorTimer: number | null = null;
+    let animationControls: any;
+
+    if (delay > 0) {
+      cursorTimer = window.setTimeout(() => setShowCursor(true), delay * 1000);
+    } else {
+      setShowCursor(true);
+    }
+
+    const animationTimer = window.setTimeout(() => {
+      animationControls = animate(count, fullText.length, {
+        type: "tween",
+        duration: 3,
+        ease: "easeInOut",
+        onComplete: () => {
+          // If continue is true, hide the cursor after animation ends
+          if (shouldContinue) {
+            setShowCursor(false);
+          }
+        },
+      });
+    }, delay * 1000);
+
+    return () => {
+      if (cursorTimer) clearTimeout(cursorTimer);
+      clearTimeout(animationTimer);
+      if (animationControls && animationControls.stop) animationControls.stop();
+    };
+  }, [fullText, delay, shouldContinue]);
+
   return (
     <div className={twMerge("inline-flex items-center", className)}>
       <motion.span>
         {displayText}
       </motion.span>
-      <motion.span
-        className={twMerge(
-          "inline-block rounded-sm w-[4px] h-2 md:h-3 lg:h-4 bg-white",
-          cursorClassName
-        )}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 0.8,
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
-      />
-    </div>
-  );
-};
-
-// NOTE: The TypewriterEffectSmooth component is unchanged, but included for completeness.
-// If you want to update it with the same logic, do so as above.
-export const TypewriterEffectSmooth = ({
-  words,
-  className,
-  cursorClassName,
-}: {
-  words: {
-    text: string;
-    className?: string;
-  }[];
-  className?: string;
-  cursorClassName?: string;
-}) => {
-  const wordsArray = words.map((word) => ({
-    ...word,
-    text: word.text.split(""),
-  }));
-
-  const renderWords = () => {
-    return (
-      <div>
-        {wordsArray.map((word, idx) => (
-          <div key={`word-${idx}`} className="inline-block">
-            {word.text.map((char, index) => (
-              <span
-                key={`char-${index}`}
-                className={twMerge(`dark:text-white text-black`, word.className)}
-              >
-                {char}
-              </span>
-            ))}
-            &nbsp;
-          </div>
-        ))}
-      </div>
-    );
-  };
-
-  return (
-    <div className={twMerge("flex space-x-1 my-6", className)}>
-      <motion.div
-        className="overflow-hidden pb-2"
-        initial={{
-          width: "0%",
-        }}
-        whileInView={{
-          width: "fit-content",
-        }}
-        transition={{
-          duration: 2,
-          ease: "linear",
-          delay: 1,
-        }}
-      >
-        <div style={{ whiteSpace: "nowrap" }}>
-          {renderWords()}
-        </div>
-      </motion.div>
-      <motion.span
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.8,
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
-        className={twMerge(
-          "block rounded-sm w-[4px] h-2 sm:h-3 xl:h-4 bg-white",
-          cursorClassName
-        )}
-      />
+      {showCursor && (
+        <motion.span
+          className={twMerge(
+            "inline-block rounded-sm w-[4px] h-2 md:h-3 lg:h-4 bg-white",
+            cursorClassName
+          )}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+        />
+      )}
     </div>
   );
 };

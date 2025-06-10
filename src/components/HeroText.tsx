@@ -2,7 +2,7 @@ import React from "react";
 import {TypewriterEffect} from "./TypewriterEffect";
 import { motion } from "motion/react";
 
-const words = [ // words for typewriter effect
+/* const words = [ // words for typewriter effect
     { text: "passionate"},
     { text: "about"},
     { text: "ui/ux,"},
@@ -15,6 +15,23 @@ const words = [ // words for typewriter effect
     { text: "guides"},
     { text: "user"},
     { text: "experience.",},
+  ]; */
+
+  const wordsLine1 = [
+    { text: "passionate" },
+    { text: "about" },
+    { text: "ui/ux," },
+    { text: "visual" },
+    { text: "design," },
+  ];
+  const wordsLine2 = [
+    { text: "and" },
+    { text: "the" },
+    { text: "language" },
+    { text: "that" },
+    { text: "guides" },
+    { text: "user" },
+    { text: "experience." },
   ];
   
   
@@ -30,20 +47,24 @@ const HeroText = () => {
                     {/* <p className = "text-sm text-neutral-300"> passionate about ui/ux, visual design, and the language that guides user experience </p> */}
                     
                      <div>
-                         <TypewriterEffect words={words} className="text-sm text-neutral-300"/>
+                         <TypewriterEffect words={wordsLine1} className="text-sm text-neutral-300" continue/>
+                         <br />
+                         <TypewriterEffect words={wordsLine2} className="text-sm text-neutral-300" delay = {2.7}/>
                     </div>
 
                 </div>
             </div>
 
             {/*--------------- mobile ---------------*/}
-            <div className ="flex justify-center flex-col space-y-0.3 px-3 md:hidden"> {/* c-space */}
-                <p className = "text-xl">front-end software developer. computer science @ uva</p>
+            <div className ="flex flex-col justify-start text-left space-y-0.3 px-3 pl-10 md:hidden"> {/* c-space */}
+                <p className = "text-xl">front-end software developer. <br /> computer science @ uva</p>
                 <div className = "flex flex-col items-start"> 
                     {/* <p className = "text-sm text-neutral-300"> passionate about ui/ux, visual design, and the language that guides user experience </p> */}
-                    
+
                      <div>
-                         <TypewriterEffect words={words} className="text-[14px] text-neutral-300"/>
+                         <TypewriterEffect words={wordsLine1} className="text-[14px] text-neutral-300" continue/>
+                         <br />
+                         <TypewriterEffect words={wordsLine2} className="text-[14px] text-neutral-300" delay = {2.7} />
                     </div>
 
                 </div>
