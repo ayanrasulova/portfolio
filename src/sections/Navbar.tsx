@@ -23,7 +23,7 @@ const Navbar = () => {
     const[isOpen, setIsOpen] = useState(false); // call setIsOpen to update to isOpen, default of useState (isOpen) will be false
 
     return ( // location is fixed, takes full width, over other elements
-        <div className = "fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary">
+        <div className = "fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-newprimary">
             <div className = "mx-auto c-space max-w-7xl"> 
                 <div className ="flex items-center justify-between py-2 sm:py-0">
                     <a 

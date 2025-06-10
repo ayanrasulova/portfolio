@@ -4,6 +4,7 @@
 @import "tailwindcss";
 @theme {
   --color-primary: #030412;
+  --color-newprimary: #0f1116;
   --color-midnight: #06091f;
   --color-navy: #161a31;
   --color-indigo: #1f1e39;
@@ -50,7 +51,7 @@
   }
 }
 body {
-  background: #0d0e12; /* 030412 */
+  background: #12141a; /* 030412 i chose 0d0e12 12141a */
   /*ALTERNATIVE FONT font-family: "Funnel Display", sans-serif; */
   font-family: "Kode Mono", monospace;
   color: white;
