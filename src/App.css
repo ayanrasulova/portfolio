@@ -3,6 +3,13 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: none;
+}
+
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: none;
 }
 
 .logo {

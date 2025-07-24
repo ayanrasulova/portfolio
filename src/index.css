@@ -56,6 +56,7 @@ body {
   font-family: "Kode Mono", monospace;
   color: white;
   scroll-behavior: smooth;
+  overscroll-behavior: none;
   overflow-x: hidden;
 }
 
