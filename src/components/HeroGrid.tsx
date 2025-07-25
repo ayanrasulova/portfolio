@@ -7,8 +7,9 @@ const HeroGrid = () => {
     <section className="w-full px-[55px] mb-20 mt-20">
        {/* c-space section-spacing*/}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[10rem]">
+
         {/* GRID 1 - also flex items-end added */}
-        <div className="flex items-end relative grid-gradient2 md:col-span-1 h-[21] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200 md:row-span-2">
+        <div className="relative grid-gradient2 md:col-span-1 h-[21] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200 md:row-span-2">
           <div className ="z-20">
             <p>hands-on experience with <span className= "text-accent2">front-end </span> development</p>
           </div>
