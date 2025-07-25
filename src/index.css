@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
 
 @import "tailwindcss";
 @theme {
@@ -65,7 +66,10 @@ html {
 body {
   background: #0f1014; /* 030412 i chose 0d0e12 12141a 1a1d25*/
   /*ALTERNATIVE FONT font-family: "Funnel Display", sans-serif; */
-  font-family: "Kode Mono", monospace;
+  /*ALTERNATIVE FONT font-family:  "Cascadia Mono", sans-serif; */
+  /*ALTERNATIVE FONT font-family:  "Kode Mono", monospace; */
+
+  font-family: "Cascadia Mono", sans-serif;
   color: white;
   scroll-behavior: smooth;
   overscroll-behavior: none;
@@ -79,6 +83,8 @@ body {
 
 .grid-gradient2 { /* custom gradient...3 color grad more blue */
   background-image: linear-gradient(to right top, #1a1d27, #1b1f2a, #1d202c, #1e222f, #202432, #1f2432, #1f2332, #1e2332, #1b202f, #191d2b, #161b28, #141825);
+  background-color: #1a1d27;
+  opacity:0.6;
   @apply p-5 rounded-2xl
 }
 

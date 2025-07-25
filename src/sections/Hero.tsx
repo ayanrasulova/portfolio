@@ -10,7 +10,9 @@ const Hero = () => {
     <section className = "flex flex-col bg-background min-h-screen overflow-hidden"> 
     <HeroText />
     <HeroGrid />
-    <BackgroundBeams />
+    <div className = "z-0">     
+      <BackgroundBeams />
+    </div>
     </section>
   );
 };
