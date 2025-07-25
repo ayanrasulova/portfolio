@@ -47,15 +47,15 @@ const HeroText = () => {
         {/* <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text "> */}
 
             {/* --------------- desktop, hidden, but shown for desktop --------------- */}
-            <div className = "flex-col justify-start hidden md:flex md:px-10 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
-                <h1 className = "text-2xl text-neutral-300" >front-end software developer. <br /> computer science @ uva</h1>
+            <div className = "flex-col justify-start hidden md:flex md:px-15 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
+                <h1 className = "text-4xl text-neutral-300" >front-end software developer. <br /> computer science @ uva</h1>
                 <div className = "flex flex-col items-start"> 
                     {/* <p className = "text-sm text-neutral-300"> passionate about ui/ux, visual design, and the language that guides user experience </p> */}
                     
                      <div>
-                         <TypewriterEffect words={wordsLine1} className="text-sm text-neutral-400" continue/>
+                         <TypewriterEffect words={wordsLine1} className="text-2xl text-neutral-400" continue/>
                          <br />
-                         <TypewriterEffect words={wordsLine2} className="text-sm text-neutral-400" delay = {2.7}/>
+                         <TypewriterEffect words={wordsLine2} className="text-2xl text-neutral-400" delay = {2.7}/>
                     </div>
                     <div> {/* wanted to add projects on hero page */}
                         <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button>

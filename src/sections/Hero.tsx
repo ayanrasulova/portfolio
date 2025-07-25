@@ -1,6 +1,7 @@
 import HeroText from "../components/HeroText";
 import HeroGrid from "../components/HeroGrid";
 import Background from "../components/Background";
+import { BackgroundBeams } from "../components/ui/background-beams";
 
 // they ran rafce for this, needs plugin
 const Hero = () => {
@@ -9,6 +10,7 @@ const Hero = () => {
     <section className = "flex flex-col bg-background min-h-screen overflow-hidden"> 
     <HeroText />
     <HeroGrid />
+    <BackgroundBeams />
     </section>
   );
 };
