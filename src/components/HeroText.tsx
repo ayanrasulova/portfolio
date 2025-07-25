@@ -53,14 +53,13 @@ const HeroText = () => {
                     {/* <p className = "text-sm text-neutral-300"> passionate about ui/ux, visual design, and the language that guides user experience </p> */}
                     
                      <div>
-                         <TypewriterEffect words={wordsLine1} className="text-sm text-neutral-300" continue/>
+                         <TypewriterEffect words={wordsLine1} className="text-sm text-neutral-400" continue/>
                          <br />
-                         <TypewriterEffect words={wordsLine2} className="text-sm text-neutral-300" delay = {2.7}/>
+                         <TypewriterEffect words={wordsLine2} className="text-sm text-neutral-400" delay = {2.7}/>
                     </div>
                     <div> {/* wanted to add projects on hero page */}
                         <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button>
-                    </div>
-
+                    </div>                    
                 </div>
             </div>
 
