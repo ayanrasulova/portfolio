@@ -9,6 +9,8 @@
   --color-button: #22252E;
   --color-accent: #19C2B3;
   --color-accent2: #199DC2;
+  --color-background: #0f1014;
+  
   --color-newprimary: #0f1116;
   --color-midnight: #06091f;
   --color-navy: #161a31;
@@ -55,6 +57,11 @@
     }
   }
 }
+
+html {
+  background: #0f1014;
+}
+
 body {
   background: #0f1014; /* 030412 i chose 0d0e12 12141a 1a1d25*/
   /*ALTERNATIVE FONT font-family: "Funnel Display", sans-serif; */

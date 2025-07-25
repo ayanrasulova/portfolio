@@ -64,9 +64,9 @@ const HeroText = () => {
             </div>
 
             {/*--------------- mobile ---------------*/}
-            <div className ="flex flex-col justify-start text-left space-y-0.3 px-3 pl-10 md:hidden"> {/* c-space */}
+            <div className ="flex flex-col items-center text-center mt-10 space-y-0.3 px-3 pr-10 pl-10 md:hidden"> {/* c-space */}
                 <p className = "text-xl">front-end software developer. <br /> computer science @ uva</p>
-                <div className = "flex flex-col items-start"> 
+                <div className = "flex flex-col items-center"> 
                     {/* <p className = "text-sm text-neutral-300"> passionate about ui/ux, visual design, and the language that guides user experience </p> */}
 
                      <div>
