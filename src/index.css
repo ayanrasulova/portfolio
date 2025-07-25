@@ -74,7 +74,10 @@ body {
   scroll-behavior: smooth;
   overscroll-behavior: none;
   overflow-x: hidden;
+
+
 }
+
 
 .grid-gradient { /* custom gradient... */
   background-image: linear-gradient(to bottom, #161a1f, #101a1f, #0b1b1c, #091b17, #0d1a0f);

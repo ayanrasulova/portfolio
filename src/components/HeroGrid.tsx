@@ -9,7 +9,7 @@ const HeroGrid = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[10rem]">
 
         {/* GRID 1 - also flex items-end added */}
-        <div className="relative grid-gradient2 md:col-span-1 h-[21] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200 md:row-span-2">
+        <div className="relative grid-gradient2 md:col-span-1 h-[21rem] rounded-2xl overflow-hidden md:row-span-2">
           <div className ="z-20">
             <p>hands-on experience with <span className= "text-accent2">front-end </span> development</p>
           </div>
@@ -19,15 +19,15 @@ const HeroGrid = () => {
         </div>
 
         {/* GRID 2 */}
-        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">2</div>
+        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden ">2</div>
         {/* GRID 3 */}
-        <div className="relative grid-gradient2 md:col-span-1 md:row-span-2 h-[21rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">3</div>
+        <div className="grid-gradient2 md:col-span-1 md:row-span-2 h-[21rem] rounded-2xl overflow-hidden ">3</div>
         {/* GRID 4 */}
-        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">4</div>
+        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden ">4</div>
         {/* GRID 5 */}
-        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">5</div>
+        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden ">5</div>
         {/* GRID 6 */}
-        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">6</div>
+        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden ">6</div>
       </div>
     </section>
   );

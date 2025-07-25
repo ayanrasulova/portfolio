@@ -9,7 +9,7 @@ import { Spotlight } from "../components/ui/spotlight-new";
 const Hero = () => {
   return ( 
     // previous className (below): "flex items-start md:items-start min-h-screen overflow-hidden"
-    <section className = "flex flex-col bg-background min-h-screen overflow-hidden"> 
+    <section className = "flex flex-col bg-background min-h-screen noscroll"> 
     <Spotlight />
     <HeroText />
     <HeroGrid />
