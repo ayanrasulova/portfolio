@@ -10,7 +10,7 @@ const Hero = () => {
   return ( 
     // previous className (below): "flex items-start md:items-start min-h-screen overflow-hidden"
     <section className = "flex flex-col bg-background min-h-screen noscroll"> 
-    <Spotlight />
+    <div h-screen max-h-screen><Spotlight /> </div>
     <HeroText />
     <HeroGrid />
     <div className = "z-0">     
