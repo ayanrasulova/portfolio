@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const HeroGrid = () => {
   return (
-    <section className="w-full px-[55px] mb-15 mt-20">
+    <section className="w-full px-[55px] mb-10 mt-20">
        {/* c-space section-spacing*/}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[10rem]">
 

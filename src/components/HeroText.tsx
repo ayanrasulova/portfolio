@@ -43,7 +43,7 @@ import BuzzEffect from "./ui/buzz";
   
 const HeroText = () => {
     return ( // added pt-30 for space from top, going to try to change the font size             
-        <div className="z-10 mt-20 md:mt-40 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
+        <div className="z-10 mt-15 md:mt-40 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
 
 
             {/* --------------- desktop, hidden, but shown for desktop --------------- */}
