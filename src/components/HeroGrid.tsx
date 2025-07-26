@@ -1,6 +1,8 @@
 import React from "react";
 import { TypewriterEffect } from "./TypewriterEffect";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+import SpotlightCard from "./ui/spotlight";
+
 
 const HeroGrid = () => {
   return (
@@ -19,7 +21,8 @@ const HeroGrid = () => {
         </div>
 
         {/* GRID 2 */}
-        <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden ">2</div>
+        <div className="grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden"></div>
+        
         {/* GRID 3 */}
         <div className="grid-gradient2 md:col-span-1 md:row-span-2 h-[21rem] rounded-2xl overflow-hidden ">3</div>
         {/* GRID 4 */}

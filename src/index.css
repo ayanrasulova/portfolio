@@ -92,8 +92,8 @@ body {
 .grid-gradient2 { /* custom gradient...3 color grad more blue */
   background-image: linear-gradient(to right top, #1a1d27, #1b1f2a, #1d202c, #1e222f, #202432, #1f2432, #1f2332, #1e2332, #1b202f, #191d2b, #161b28, #141825);
   background-color: #1a1d27;
-  opacity:0.6;
-  @apply p-5 rounded-2xl
+  /* opacity:0.6; */
+  @apply p-5 rounded-2xl relative overflow-hidden hover:-translate-y-1 duration-200
 }
 
 
@@ -141,6 +141,7 @@ body {
 }
 
 /* About Section */
+
 .grid-1 {
   @apply row-span-2 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
@@ -180,6 +181,9 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+
+
 
 /* ------------------------- trying glitch effect -------------------------*/
 
