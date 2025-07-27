@@ -24,7 +24,7 @@ const Navbar = () => {
 
     return ( // location is fixed, takes full width, over other elements... pt adds padding
     // darker color 12141a lighter color 0f1116
-        <div className = "fixed inset-x-0 z-20 h-12 w-full pt-1 backdrop-blur-lg bg-navbar"> 
+        <div className = "fixed inset-x-0 z-20 h-12 w-full pt-1 backdrop-blur-lg navshadow bg-navbar"> 
             <div className = "mx-auto c-space max-w-7xl"> 
                 <div className ="flex items-center justify-between py-2 sm:py-0"> {/* py-2 sm:py-0*/}
                     <a 

@@ -1,22 +1,8 @@
 import React from "react";
 import {TypewriterEffect} from "./TypewriterEffect";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import BuzzEffect from "./ui/buzz";
-
-/* const words = [ // words for typewriter effect
-    { text: "passionate"},
-    { text: "about"},
-    { text: "ui/ux,"},
-    { text: "visual"},
-    { text: "design,"},
-    { text: "and"},
-    { text: "the"  },
-    { text: "language" },
-    { text: "that"  },
-    { text: "guides"},
-    { text: "user"},
-    { text: "experience.",},
-  ]; */
 
   const wordsLine1 = [
     { text: "passionate" },
@@ -43,7 +29,7 @@ import BuzzEffect from "./ui/buzz";
   
 const HeroText = () => {
     return ( // added pt-30 for space from top, going to try to change the font size             
-        <div className="z-10 mt-15 md:mt-40 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
+        <div className="z-10 mt-15 md:mt-35 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
 
 
             {/* --------------- desktop, hidden, but shown for desktop --------------- */}
