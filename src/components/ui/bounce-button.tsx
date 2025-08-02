@@ -13,7 +13,7 @@ const BounceButton = ({ children }: BounceButtonProps) => {
     <motion.button
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="rounded-full bg-flatbutton hover:bg-neutral-300 hover:text-navbar text-neutral-300 w-10 h-10 px-2 py-2 text-sm font-medium"
+      className="rounded-full bg-black border p-2 hover:bg-neutral-300 hover:text-navbar text-neutral-300 w-10 h-10 px-2 py-2 text-sm font-medium"
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       {children}
