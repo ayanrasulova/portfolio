@@ -15,7 +15,7 @@ const Hero = () => {
     <section className = "flex flex-col bg-darkerbackground min-h-screen overscroll-none noscroll"> 
     <div h-screen max-h-screen><Spotlight /> </div>
     <HeroText />
-    <div className = "absolute z-30">
+    <div className = "absolute z-20">
       <HeroButtons />
     </div>
     <HeroGrid />

@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div className = "container mx-auto max-w-7xl">
       {/* make sure you add each component into App.tsx */} 
-      <Navbar /> 
+      <div className = "z-30"><Navbar /> </div>
       <Hero />
     </div>
   )
