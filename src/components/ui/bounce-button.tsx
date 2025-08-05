@@ -1,4 +1,7 @@
 // edited from syntax ui bounce button
+
+//adding text to see if source control works 
+
 "use client";
 import { motion } from "framer-motion";
 import React from "react";

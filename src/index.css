@@ -101,9 +101,10 @@ body {
   .button-gradient {
     background-image: linear-gradient(to right top, #1a1d27, #1b1f2a, #1d202c, #1e222f, #202432, #1f2432, #1f2332, #1e2332, #1b202f, #191d2b, #161b28, #141825);
     /*background-color: #1a1d27; */
-    /* opacity:0.6; */
+    /* opacity:0.6;  */
   }
 }
+
 
 
 .c-space {

@@ -33,7 +33,7 @@ const HeroText = () => {
         <div className="z-10 mt-15 md:mt-35 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
 
 
-            {/* --------------- desktop, hidden, but shown for desktop --------------- */}
+            {/* --------------- desktop, hidden, but shown for desktop  --------------- */}
             <div className = "flex-col justify-start items-start hidden md:flex md:px-15 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
                 <h1 className = "text-4xl pb-2 text-neutral-300" >front-end software developer. <br /> computer science @ uva</h1>
 

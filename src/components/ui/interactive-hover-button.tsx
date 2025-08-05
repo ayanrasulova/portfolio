@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import { cn } from "../ui/utils.ts"; // changed folder name 
+import { cn } from "../ui/utils.ts"; //  changed folder name 
 
 interface InteractiveHoverButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {}

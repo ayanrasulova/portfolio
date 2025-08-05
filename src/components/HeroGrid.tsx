@@ -7,7 +7,7 @@ import SpotlightCard from "./ui/spotlight";
 const HeroGrid = () => {
   return (
     <section className="z-20 w-full px-[55px] mb-10 mt-20">
-       {/* c-space section-spacing*/}
+       {/* c-space section-spacing */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[10rem]">
 
 

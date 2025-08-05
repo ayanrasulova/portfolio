@@ -11,7 +11,7 @@ const HeroButtons = () => {
 
       <div className="space-y-4 text-2xl">
         {/* LinkedIn Row */}
-        <div className="hidden md:flex items-center justify-end gap-4"> {/* items-center keeps in center, justify end so buttons line up */}
+        <div className="hidden md:flex items-center justify-end gap-4"> {/*  items-center keeps in center, justify end so buttons line up */}
           <p>linkedin</p>
           <BounceButton>in</BounceButton>
         </div>
