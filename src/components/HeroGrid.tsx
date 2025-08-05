@@ -19,16 +19,16 @@ const HeroGrid = () => {
           <img src= "src/assets/coding-pov.png" className = "scale-[3.5] mt-15 ml-20 object-contain"></img>
         </div>
 
-        {/* GRID 2 */}
+        {/* GRID 2 -  3+ hackathons + 1x winner*/}
         <div className="grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200"></div>
         
-        {/* GRID 3 */}
+        {/* GRID 3 - tech stack*/}
         <div className="grid-gradient2 md:col-span-1 md:row-span-2 h-[21rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">3</div>
-        {/* GRID 4 */}
+        {/* GRID 4 - most recent project; posture pal*/}
         <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">4</div>
-        {/* GRID 5 */}
+        {/* GRID 5 -  graphic design + adobe creative suite experience  */}
         <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">5</div>
-        {/* GRID 6 */}
+        {/* GRID 6 - technical writing + communication skills (be like over 3+ yrs tutoring) */}
         <div className=" grid-gradient2 md:col-span-1 h-[10rem] rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">6</div>
 
 

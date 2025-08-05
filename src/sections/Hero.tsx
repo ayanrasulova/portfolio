@@ -19,9 +19,9 @@ const Hero = () => {
       <HeroButtons />
     </div>
     <HeroGrid />
-    <div className = "z-0">     
+    {/* <div className = "z-0">     
       <BackgroundBeams />
-    </div>
+    </div> */}
     </section>
   );
 };
