@@ -13,20 +13,21 @@ const HeroButtons = () => {
         {/* LinkedIn Row */}
         <div className="hidden md:flex items-center justify-end gap-4"> {/*  items-center keeps in center, justify end so buttons line up */}
           <p>linkedin</p>
-          <BounceButton>in</BounceButton>
+          <a href = "https://linkedin.com/in/ayan-rasulova-96272123a" target="_blank"><BounceButton>in</BounceButton></a>
         </div>
 
         {/* GitHub Row */}
         <div className="hidden md:flex items-center justify-end gap-4">
           <p>github</p>
-          <BounceButton>gh</BounceButton>
+          <a href = "https://github.com/ayanrasulova" target="_blank"><BounceButton>gh</BounceButton></a>
         </div>
 
         {/* Devpost Row */}
         <div className="hidden md:flex items-center justify-end gap-4">
           <p>devpost</p>
-          <BounceButton>dp</BounceButton>
+          <a href = "https://devpost.com/ayanrasulova?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank"><BounceButton>dp</BounceButton></a>
         </div>
+
       </div>
     </div>
   );

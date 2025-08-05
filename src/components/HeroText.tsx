@@ -35,7 +35,7 @@ const HeroText = () => {
 
             {/* --------------- desktop, hidden, but shown for desktop  --------------- */}
             <div className = "flex-col justify-start items-start hidden md:flex md:px-15 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
-                <h1 className = "text-4xl pb-2 text-neutral-300" >front-end software developer. <br /> computer science @ uva</h1>
+                <h1 className = "text-4xl pb-2 mt-3 text-neutral-300" >front-end software developer. <br /> computer science @ uva</h1>
 
                 <div className = "flex flex-col items-start"> 
                     {/*used to be items-start */}
@@ -45,7 +45,7 @@ const HeroText = () => {
                          <br />
                          <TypewriterEffect words={wordsLine2} className="text-2xl text-neutral-400" delay = {2.7}/>
                     </div>
-                    <div className = "text-sm pt-1.5 mt-4"> 
+                    <div className = "text-sm  mt-4"> 
                         {/* <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button> */}
                         <InteractiveHoverButton>see my projects</InteractiveHoverButton>
                     </div>                    
@@ -55,15 +55,19 @@ const HeroText = () => {
 
             {/*--------------- mobile ---------------*/}
             <div className ="flex flex-col items-center text-center mt-10 space-y-0.3 px-3 pr-10 pl-10 md:hidden"> {/* c-space */}
-                <p className = "text-xl">front-end software developer. <br /> computer science @ uva</p>
+                <p className = "text-3xl">front-end software developer. <br /> computer science @ uva</p>
                 <div className = "flex flex-col items-center"> 
                     {/* <p className = "text-sm text-neutral-300"> passionate about ui/ux, visual design, and the language that guides user experience </p> */}
 
-                     <div>
-                         <TypewriterEffect words={wordsLine1} className="text-[14px] text-neutral-300" continue/>
+                     <div className = "pt-2">
+                         <TypewriterEffect words={wordsLine1} className="text-[17px] text-neutral-300" continue/>
                          <br />
-                         <TypewriterEffect words={wordsLine2} className="text-[14px] text-neutral-300" delay = {2.7} />
+                         <TypewriterEffect words={wordsLine2} className="text-[17px] text-neutral-300" delay = {2.7} />
                     </div>
+                    <div className = "text-sm mt-4 items-center md:hidden"> 
+                        {/* <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button> */}
+                        <InteractiveHoverButton>see my projects</InteractiveHoverButton>
+                    </div>   
 
                 </div>
             </div>
