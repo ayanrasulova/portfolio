@@ -5,7 +5,7 @@ import {motion} from "motion/react" // npm install motion (framer motion)
 function Navigation() {
     return <ul className = "nav-ul">
         <li className = "nav-li">
-           <a className = "nav-link"> Home </a> 
+           <a href =  "/" className = "nav-link"> Home </a> 
         </li>
         <li className = "nav-li">
            <a className = "nav-link"> Projects </a> 

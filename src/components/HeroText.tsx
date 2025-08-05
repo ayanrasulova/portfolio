@@ -45,7 +45,7 @@ const HeroText = () => {
                          <br />
                          <TypewriterEffect words={wordsLine2} className="text-2xl text-neutral-400" delay = {2.7}/>
                     </div>
-                    <div className = "text-sm p-1.5 mt-4"> 
+                    <div className = "text-sm pt-1.5 mt-4"> 
                         {/* <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button> */}
                         <InteractiveHoverButton>see my projects</InteractiveHoverButton>
                     </div>                    
