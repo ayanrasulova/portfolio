@@ -6,7 +6,7 @@ import BounceButton from "./ui/bounce-button";
 
 const HeroButtons = () => {
   return (
-    <div className="mt-39 mr-30 text-center md:justify-end md:text-right pl-0 md:pl-[66em] text-neutral-300"> {/* used to be 220px padding left + ml 210* OR 423 percent */}
+    <div className="mt-39 mr-30 text-center md:justify-end md:text-right pl-0 md:pl-[67.4em] text-neutral-300"> {/* used to be 220px padding left + ml 210* OR 423 percent */}
 
 
       <div className="space-y-4 text-2xl">

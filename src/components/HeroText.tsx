@@ -8,9 +8,9 @@ import { InteractiveHoverButton } from "./ui/interactive-hover-button";
   const wordsLine1 = [
     { text: "passionate" },
     { text: "about" },
-    { text: "ui/ux," },
+    { text: "ui/ux,", className: "text-accent" },
     { text: "visual" },
-    { text: "design," },
+    { text: "design,", className: "text-accent2" },
   ];
   const wordsLine2 = [
     { text: "and" },
@@ -18,8 +18,8 @@ import { InteractiveHoverButton } from "./ui/interactive-hover-button";
     { text: "language" },
     { text: "that" },
     { text: "guides" },
-    { text: "user" },
-    { text: "experience." },
+    { text: "user", className: "text-accent3" },
+    { text: "experience.", className: "text-accent3" },
   ];
   const project = [
     { text: "see"},
@@ -37,15 +37,15 @@ const HeroText = () => {
             <div className = "flex-col justify-start items-start hidden md:flex md:px-15 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
                 <h1 className = "text-4xl pb-2 mt-3 text-neutral-300" >front-end software developer. <br /> computer science @ uva</h1>
 
-                <div className = "flex flex-col items-start"> 
+                <div className = "flex flex-col pt-1 items-start"> 
                     {/*used to be items-start */}
                     
-                     <div>
+                     <div className = "absolute">
                          <TypewriterEffect words={wordsLine1} className="text-2xl text-neutral-400" continue/>
                          <br />
                          <TypewriterEffect words={wordsLine2} className="text-2xl text-neutral-400" delay = {2.7}/>
                     </div>
-                    <div className = "text-sm  mt-4"> 
+                    <div className = " text-sm  pt-3 mt-20 "> 
                         {/* <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button> */}
                         <InteractiveHoverButton>see my projects</InteractiveHoverButton>
                     </div>                    

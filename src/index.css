@@ -12,8 +12,9 @@
   --color-body: #1A1D25;
   --color-flatbutton: #272A3B;
   --color-button: #22252E;
-  --color-accent: #19C2B3;
+  --color-accent: #f2cb68;
   --color-accent2: #199DC2;
+  --color-accent3: #91d97c;
   --color-background: #0f1014;
   --color-darkerbackground: #070709;
   
@@ -75,7 +76,7 @@ body {
   /*ALTERNATIVE FONT font-family:  "Kode Mono", monospace; */
   /*ALTERNATIVE FONT font-family:   "Road Rage", sans-serif; */
 
-  font-family: "Cascadia Mono", sans-serif;
+  font-family: "Funnel Display", sans-serif;
   color: white;
   scroll-behavior: smooth;
   overscroll-behavior: none;
@@ -136,8 +137,12 @@ body {
   @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
 }
 
+/* .navshadow {
+  box-shadow: 0px 10px 120px -12px rgba(255, 255, 255, 0.5);
+} */
+
 .navshadow {
-  box-shadow: 0px 4px 8px -6px rgba(51, 97, 212, 0.5);
+  box-shadow: 0px 10px 70px -6px rgba(0, 0, 0, 0.9);
 }
 
 .nav-li {
