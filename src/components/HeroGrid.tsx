@@ -1,7 +1,6 @@
 import React from "react";
 import { TypewriterEffect } from "./TypewriterEffect";
 import { motion } from "framer-motion";
-import SpotlightCard from "./ui/spotlight";
 
 
 const HeroGrid = () => {
@@ -12,12 +11,9 @@ const HeroGrid = () => {
       
         {/* Grid 1 */}
         <div className="relative grid-gradient2 md:col-span-1 md:row-span-2 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
-          <div className=" ">
-            <p className ="z-20">
-            hands-on experience with <span className="text-accent">front-end</span> development
-            </p>
-          </div>
-          <img src="src/assets/coding-pov.png" className="scale-[3.5] mt-15 ml-20 object-contain" />
+          <div className="absolute z-30 "> <p>hands-on experience with <span className="text-accent">front-end</span> development</p> </div>
+          <div className = "z-20"><img src="src/assets/coding-pov.png" className="scale-[3] hover:scale-[4] duration-200 mt-25 ml-20 object-contain" /> </div> 
+          {/* scale scale-[3.5] */}
         </div>
 
         {/* Grid 2 */}

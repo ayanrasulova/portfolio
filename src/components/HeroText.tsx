@@ -35,7 +35,7 @@ const HeroText = () => {
 
             {/* --------------- desktop, hidden, but shown for desktop  --------------- */}
             <div className = "flex-col justify-start items-start hidden md:flex md:px-15 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
-                <h1 className = "text-4xl pb-2 mt-3 text-neutral-300" >front-end software developer. <br /> computer science @ uva</h1>
+                <h1 className = "text-4xl pb-2 mt-3 text-neutral-300" >Front-end Software Developer. <br /> Computer Science @ UVA</h1>
 
                 <div className = "flex flex-col pt-1 items-start"> 
                     {/*used to be items-start */}
