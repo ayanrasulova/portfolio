@@ -1,5 +1,6 @@
 import React from "react";
 import { TypewriterEffect } from "./TypewriterEffect";
+import { Marquee } from "./ui//marquee.tsx";
 import { motion } from "framer-motion";
 
 
@@ -27,6 +28,7 @@ const HeroGrid = () => {
         <div className="grid-gradient2 md:col-span-1 md:row-span-2 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
           <div className="">
             <p>tech stack:</p>
+            {/* <Marquee pauseOnHover className="[--duration:20s]"></Marquee> */}
           </div>
         </div>
 
