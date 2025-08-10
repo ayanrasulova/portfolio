@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeroGrid = () => {
   return (
-    <section className="z-20 w-full px-[55px] mb-10 mt-20">
+    <section className="z-20 w-full px-[55px] mb-10 mt-17">
        {/* c-space section-spacing */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[11rem]">  {/* change auto rows based on smaller row height */}
       

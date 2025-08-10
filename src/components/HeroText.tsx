@@ -30,12 +30,12 @@ import { InteractiveHoverButton } from "./ui/interactive-hover-button";
   
 const HeroText = () => {
     return ( // added pt-30 for space from top, going to try to change the font size             
-        <div className="z-10 mt-15 md:mt-35 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
+        <div className="z-10 mt-15 md:mt-32 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
 
 
             {/* --------------- desktop, hidden, but shown for desktop  --------------- */}
             <div className = "flex-col justify-start items-start hidden md:flex md:px-15 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
-                <h1 className = "text-4xl pb-2 mt-3 text-neutral-300" >Front-end Software Developer. <br /> Computer Science @ UVA</h1>
+                <h1 className = "text-4xl pb-2 mt-0 text-neutral-300" >Front-end Software Developer. <br /> Computer Science @ UVA</h1>
 
                 <div className = "flex flex-col pt-1 items-start"> 
                     {/*used to be items-start */}
