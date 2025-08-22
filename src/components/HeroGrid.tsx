@@ -2,6 +2,69 @@ import React from "react";
 import { TypewriterEffect } from "./TypewriterEffect";
 import { Marquee } from "./ui//marquee.tsx";
 import { motion } from "framer-motion";
+import { cn } from "./ui/utils.ts"; // adjust path if needed
+
+
+const techstack = [
+  {
+    name: "java",
+    img: "",
+  },
+  {
+    name: "python",
+    img: "",
+  },
+  {
+    name: "html/css",
+    img: "",
+  },
+];
+
+const firstRow = techstack.slice(0, techstack.length / 2);
+const secondRow = techstack.slice(techstack.length / 2);
+const thirdRow = techstack.slice(0, techstack.length / 2);
+const fourthRow = techstack.slice(techstack.length / 2);
+
+
+const TechCard = ({
+  img,
+  name,
+}: {
+  img: string;
+  name: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-full w-fit sm:w-36 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+        </div>
+      </div>
+    </figure>
+  );
+};
+
+
+
+        
+      
+      
+ 
+  
+
+
+
 
 
 const HeroGrid = () => {
@@ -24,10 +87,38 @@ const HeroGrid = () => {
           </div>
         </div>
 
-        {/* Grid 3 */}
+        {/* Grid 3 tech stack */}
         <div className="grid-gradient2 md:col-span-1 md:row-span-2 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
           <div className="">
             <p>tech stack:</p>
+            
+            <div className="flex flex-row items-center gap-4" style={{transform: "translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)",}}>
+              <Marquee pauseOnHover vertical className="[--duration:20s]">
+                {firstRow.map((techstack) => (
+                <TechCard key={techstack.name} {...techstack} />
+                ))}
+              </Marquee>
+              <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
+                {secondRow.map((techstack) => (
+                <TechCard key={techstack.name} {...techstack} />
+                ))}
+              </Marquee>
+              <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
+                {thirdRow.map((review) => (
+                <TechCard key={review.name} {...review} />
+                ))}
+              </Marquee>
+              <Marquee pauseOnHover className="[--duration:20s]" vertical>
+                {fourthRow.map((review) => (
+                <TechCard key={review.name} {...review} />
+                ))}
+              </Marquee>
+            </div>
+
+          
+            
+            
+
             {/* <Marquee pauseOnHover className="[--duration:20s]"></Marquee> */}
           </div>
         </div>
