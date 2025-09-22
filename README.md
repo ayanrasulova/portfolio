@@ -1,4 +1,4 @@
-# hai welcome to my portfolio 
+# Work in progress portfolio website for Ayan's developer works!
 
 install the following... 
 npm i motion clsx tailwind-merge
