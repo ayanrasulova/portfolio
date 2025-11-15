@@ -33,7 +33,7 @@ const Navbar = () => {
                     <a 
                     href =  "/"
                     className = "text-xl font-bold transition-colors text-neutral-400 hover:text-white">
-                    Ayan
+                    <span> &lt;/&gt; </span>Ayan
                     </a>  
 
                     <button onClick={() => setIsOpen(!isOpen)} // when clicked, change isOpen to opposite of what it is
