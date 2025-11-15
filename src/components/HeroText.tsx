@@ -2,7 +2,6 @@ import React from "react";
 import {TypewriterEffect} from "./TypewriterEffect";
 // import { motion } from "motion/react";
 import { motion } from "framer-motion";
-import BuzzEffect from "./ui/buzz";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 
   const wordsLine1 = [
