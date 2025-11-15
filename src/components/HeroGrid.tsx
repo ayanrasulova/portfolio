@@ -57,33 +57,23 @@ const TechCard = ({
 
 
 
-        
-      
-      
- 
-  
-
-
-
-
-
 const HeroGrid = () => {
   return (
     <section className="z-20 w-full px-[55px] mb-10 mt-17">
        {/* c-space section-spacing */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[11rem]">  {/* change auto rows based on smaller row height */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[9rem]">  {/* change auto rows based on smaller row height */}
       
         {/* Grid 1 */}
         <div className="relative grid-gradient2 md:col-span-1 md:row-span-2 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
-          <div className="absolute z-30 "> <p>hands-on experience with <span className="text-accent">front-end</span> development</p> </div>
+          <div className="absolute z-30 "> <p>software engineer @ <span className="text-accent">the course forum</span> at uva</p> </div>
           <div className = "z-20"><img src="src/assets/coding-pov.png" className="scale-[3] hover:scale-[4] duration-200 mt-25 ml-20 object-contain" /> </div> 
           {/* scale scale-[3.5] */}
         </div>
 
         {/* Grid 2 */}
         <div className="grid-gradient2 md:col-span-1 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
-          <div className="pt-29 justify-items-end">
-            <p>3+ <span className = "text-accent3"> hackathons</span> experience</p>
+          <div className="pt-20 justify-items-end">
+            <p>2x <span className = "text-accent3"> hackathon</span> winner</p>
           </div>
         </div>
 
@@ -126,7 +116,7 @@ const HeroGrid = () => {
         {/* Grid 4 */}
         <div className="grid-gradient2 md:col-span-1 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
           <div className="">
-            <p>most recent project: posture pal</p>
+            <p>edtech intern @ meducation alliance</p>
           </div>
         </div>
 
