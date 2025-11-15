@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
 
 
 //function App() { // self closing syntax
@@ -14,6 +15,7 @@ const App = () => {
       {/* make sure you add each component into App.tsx */} 
       <div className = "z-30"><Navbar /> </div>
       <Hero />
+      <Projects />
     </div>
   )
 }

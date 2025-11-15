@@ -8,7 +8,7 @@ import { InteractiveHoverButton } from "./ui/interactive-hover-button";
   const wordsLine1 = [
     { text: "passionate" },
     { text: "about" },
-    { text: "ui/ux,", className: "text-accent" },
+    { text: "software,", className: "text-accent" },
     { text: "visual" },
     { text: "design,", className: "text-accent2" },
   ];
@@ -21,12 +21,7 @@ import { InteractiveHoverButton } from "./ui/interactive-hover-button";
     { text: "user", className: "text-accent3" },
     { text: "experience.", className: "text-accent3" },
   ];
-  const project = [
-    { text: "see"},
-    { text: "my"},
-    { text: "projects"},
-  ]
-  
+
   
 const HeroText = () => {
     return ( // added pt-30 for space from top, going to try to change the font size             

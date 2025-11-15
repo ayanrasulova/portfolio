@@ -116,14 +116,14 @@ const HeroGrid = () => {
         {/* Grid 4 */}
         <div className="grid-gradient2 md:col-span-1 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
           <div className="">
-            <p>edtech intern @ meducation alliance</p>
+            <p>graphic design & <span className = "text-accent2"> commission </span>experience</p>
           </div>
         </div>
 
         {/* Grid 5 */}
         <div className="grid-gradient2 md:col-span-1 rounded-2xl overflow-hidden hover:-translate-y-1 duration-200">
           <div className="">
-            <p>graphic design & <span className = "text-accent2"> commission </span>experience</p>
+            <p>cyber security focal path, data science & english double-minor</p>
           </div>
         </div>
 

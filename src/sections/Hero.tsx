@@ -22,6 +22,7 @@ const Hero = () => {
     {/* <div className = "z-0">     
       <BackgroundBeams />
     </div> */}
+    
     </section>
   );
 };
