@@ -14,6 +14,9 @@ function Navigation() {
            <a className = "nav-link"> Creative Work </a> 
         </li>
         <li className = "nav-li">
+            <a className = "nav-link"> Blog </a>
+        </li>
+        <li className = "nav-li">
            <a className = "nav-link"> About </a> 
         </li>
     </ul>
