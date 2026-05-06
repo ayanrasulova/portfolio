@@ -17,7 +17,7 @@ import FuzzyText from "./ui/fuzzytext";
   ];
   const wordsLine2 = [
     { text: "current" },
-    { text: "software" },
+    { text: "fullstack" },
     { text: "dev" },
     { text: "@" },
     { text: "thecourseforum", className: "text-white" },
