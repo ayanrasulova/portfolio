@@ -63,7 +63,7 @@ const HeroText = () => {
 
                     <div className = " text-sm  pt-3 mt-3 "> 
                         {/* <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button> */}
-                        <InteractiveHoverButton>see my projects</InteractiveHoverButton>
+                        <a href="/projects"><InteractiveHoverButton>see my projects</InteractiveHoverButton></a>
                     </div>                    
                 </div>
             </div>
@@ -91,7 +91,7 @@ const HeroText = () => {
 
                     <div className = " text-sm  pt-3 mt-3 "> 
                         {/* <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button> */}
-                        <InteractiveHoverButton>see my projects</InteractiveHoverButton>
+                        <a href = "/projects"> <InteractiveHoverButton>see my projects</InteractiveHoverButton> </a> 
                     </div>   
 
                 </div>

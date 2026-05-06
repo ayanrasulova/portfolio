@@ -8,16 +8,16 @@ function Navigation() {
            <a href =  "/" className = "nav-link"> home </a> 
         </li>
         <li className = "nav-li">
-           <a className = "nav-link"> projects </a> 
+           <a href =  "/projects" className = "nav-link"> projects </a> 
         </li>
         <li className = "nav-li">
-           <a className = "nav-link"> creative work </a> 
+           <a href =  "/creative-work" className = "nav-link"> creative work </a> 
         </li>
         <li className = "nav-li">
-            <a className = "nav-link"> shop </a>
+            <a href =  "/shop" className = "nav-link"> shop </a>
         </li>
         <li className = "nav-li">
-           <a className = "nav-link"> about </a> 
+           <a href =  "/about" className = "nav-link"> about </a> 
         </li>
     </ul>
 }
