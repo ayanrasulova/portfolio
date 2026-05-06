@@ -273,7 +273,11 @@ export default function FaultyTerminal({
   const frozenTimeRef = useRef(0);
   const rafRef = useRef<number>(0);
   const loadAnimationStartRef = useRef<number>(0);
-  const timeOffsetRef = useRef<number>(Math.random() * 100);
+  const timeOffsetRef = useRef<number>(0);
+  const pageLoadAnimationRef = useRef<boolean>(pageLoadAnimation);
+  const loadAnimationPlayedRef = useRef<boolean>(false);
+  const timeStorageKey = 'faultyTerminalTimeOffset';
+  const loadStorageKey = 'faultyTerminalPageLoaded';
 
   const tintVec = useMemo(() => hexToRgb(tint), [tint]);
 
@@ -324,8 +328,8 @@ export default function FaultyTerminal({
         },
         uMouseStrength: { value: mouseStrength },
         uUseMouse: { value: mouseReact ? 1 : 0 },
-        uPageLoadProgress: { value: pageLoadAnimation ? 0 : 1 },
-        uUsePageLoadAnimation: { value: pageLoadAnimation ? 1 : 0 },
+        uPageLoadProgress: { value: pageLoadAnimationRef.current ? 0 : 1 },
+        uUsePageLoadAnimation: { value: pageLoadAnimationRef.current ? 1 : 0 },
         uBrightness: { value: brightness }
       }
     });
@@ -343,6 +347,19 @@ export default function FaultyTerminal({
       );
     }
 
+    const storedOffset = typeof window !== 'undefined' ? window.sessionStorage.getItem(timeStorageKey) : null;
+    if (storedOffset) {
+      timeOffsetRef.current = parseFloat(storedOffset) || Math.random() * 100;
+    } else {
+      timeOffsetRef.current = Math.random() * 100;
+      if (typeof window !== 'undefined') {
+        window.sessionStorage.setItem(timeStorageKey, String(timeOffsetRef.current));
+      }
+    }
+
+    const shouldRunPageLoadAnimation = pageLoadAnimation && typeof window !== 'undefined' && !window.sessionStorage.getItem(loadStorageKey);
+    pageLoadAnimationRef.current = shouldRunPageLoadAnimation;
+
     const resizeObserver = new ResizeObserver(() => resize());
     resizeObserver.observe(ctn);
     resize();
@@ -350,23 +367,30 @@ export default function FaultyTerminal({
     const update = (t: number) => {
       rafRef.current = requestAnimationFrame(update);
 
-      if (pageLoadAnimation && loadAnimationStartRef.current === 0) {
+      if (pageLoadAnimationRef.current && loadAnimationStartRef.current === 0) {
         loadAnimationStartRef.current = t;
       }
 
       if (!pause) {
-        const elapsed = (t * 0.001 + timeOffsetRef.current) * timeScale;
+        const elapsed = (Date.now() * 0.001 + timeOffsetRef.current) * timeScale;
         program.uniforms.iTime.value = elapsed;
         frozenTimeRef.current = elapsed;
       } else {
         program.uniforms.iTime.value = frozenTimeRef.current;
       }
 
-      if (pageLoadAnimation && loadAnimationStartRef.current > 0) {
+      if (pageLoadAnimationRef.current && loadAnimationStartRef.current > 0) {
         const animationDuration = 2000;
         const animationElapsed = t - loadAnimationStartRef.current;
         const progress = Math.min(animationElapsed / animationDuration, 1);
         program.uniforms.uPageLoadProgress.value = progress;
+
+        if (progress >= 1 && !loadAnimationPlayedRef.current) {
+          loadAnimationPlayedRef.current = true;
+          if (typeof window !== 'undefined') {
+            window.sessionStorage.setItem(loadStorageKey, 'true');
+          }
+        }
       }
 
       if (mouseReact) {
@@ -395,7 +419,6 @@ export default function FaultyTerminal({
       if (gl.canvas.parentElement === ctn) ctn.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
       loadAnimationStartRef.current = 0;
-      timeOffsetRef.current = Math.random() * 100;
     };
   }, [
     dpr,

@@ -23,25 +23,25 @@ createRoot(document.getElementById('root')!).render(
       </Routes>
     </BrowserRouter>
     <div className="fixed inset-0 z-0">
-          <FaultyTerminal
-            scale={1.7}
-            gridMul={[2, 1]}
-            digitSize={2}
-            timeScale={0.5}
-            pause={false}
-            scanlineIntensity={0.9}
-            glitchAmount={1}
-            flickerAmount={1}
-            noiseAmp={1}
-            chromaticAberration={0}
-            dither={0}
-            curvature={0.29}
-            tint="#ffffff"
-            mouseReact
-            mouseStrength={0.5}
-            pageLoadAnimation
-            brightness={0.1}
-          />
-        </div>
+      <FaultyTerminal
+          scale={1.7}
+          gridMul={[2, 1]}
+          digitSize={2}
+          timeScale={0.5}
+          pause={false}
+          scanlineIntensity={0.9}
+          glitchAmount={1}
+          flickerAmount={1}
+          noiseAmp={1}
+          chromaticAberration={0}
+          dither={0}
+          curvature={0.29}
+          tint="#ffffff"
+          mouseReact
+          mouseStrength={0.5}
+          pageLoadAnimation
+          brightness={0.1}
+        />
+    </div>
   </StrictMode>,
 )
