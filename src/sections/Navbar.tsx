@@ -5,19 +5,19 @@ import {motion} from "motion/react" // npm install motion (framer motion)
 function Navigation() {
     return <ul className = "nav-ul">
         <li className = "nav-li">
-           <a href =  "/" className = "nav-link"> Home </a> 
+           <a href =  "/" className = "nav-link"> home </a> 
         </li>
         <li className = "nav-li">
-           <a className = "nav-link"> Projects </a> 
+           <a className = "nav-link"> projects </a> 
         </li>
         <li className = "nav-li">
-           <a className = "nav-link"> Creative Work </a> 
+           <a className = "nav-link"> creative work </a> 
         </li>
         <li className = "nav-li">
-            <a className = "nav-link"> Blog </a>
+            <a className = "nav-link"> blog </a>
         </li>
         <li className = "nav-li">
-           <a className = "nav-link"> About </a> 
+           <a className = "nav-link"> about </a> 
         </li>
     </ul>
 }
@@ -33,7 +33,7 @@ const Navbar = () => {
                     <a 
                     href =  "/"
                     className = "text-xl font-bold transition-colors text-neutral-400 hover:text-white">
-                    Ayan
+                    ion
                     </a>  
 
                     <button onClick={() => setIsOpen(!isOpen)} // when clicked, change isOpen to opposite of what it is

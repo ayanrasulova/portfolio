@@ -8,7 +8,9 @@
 @import "tailwindcss";
 @theme {
   --color-primary: #030412;
-  --color-navbar: #0B0C0F;
+  --color-navbar: #030303;
+  --color-newnavbar: #030303;
+
   --color-body: #1A1D25;
   --color-flatbutton: #272A3B;
   --color-button: #22252E;
@@ -21,6 +23,7 @@
   --color-newprimary: #0f1116;
   --color-midnight: #06091f;
   --color-navy: #161a31;
+  --color-white: #FFFFFF;
   --color-indigo: #1f1e39;
   --color-storm: #282b4b;
   --color-aqua: #33c2cc;
@@ -142,7 +145,7 @@ body {
 } */
 
 .navshadow {
-  box-shadow: 0px 10px 70px -6px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 3px 100px -10px rgba(110, 110, 110, 0.3);
 }
 
 .nav-li {
