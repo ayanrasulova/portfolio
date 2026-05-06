@@ -22,7 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
-    <div className="fixed inset-0 z-0">
+    <div className="fixed inset-0 z--10">
       <FaultyTerminal
           scale={1.7}
           gridMul={[2, 1]}
