@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Road+Rage&display=swap'); /*more grunge?? */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 @import "tailwindcss";
 @theme {
@@ -35,6 +35,8 @@
   --color-sand: #d6995c;
   --color-coral: #ea4884;
   --animate-orbit: orbit 50s linear infinite;
+
+  
   @keyframes orbit {
     0% {
       transform: rotate(calc(var(--angle) * 1deg))
@@ -79,7 +81,7 @@ body {
   /*ALTERNATIVE FONT font-family:  "Kode Mono", monospace; */
   /*ALTERNATIVE FONT font-family:   "Road Rage", sans-serif; */
 
-  font-family: "Funnel Display", sans-serif;
+  font-family: "Lato", sans-serif;
   color: white;
   scroll-behavior: smooth;
   overscroll-behavior: none;

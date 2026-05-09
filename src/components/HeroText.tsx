@@ -51,9 +51,9 @@ const HeroText = () => {
                 {/* <h1 className = "text-9xl text-neutral-300"> hi, i'm ion </h1> */}
                 {/* <h1 className = "text-3xl text-neutral-300"> (or ayan) </h1> */}
 
-                <div className = "flex flex-col pt-1 items-center"> 
+                <div className = "flex flex-col items-center"> 
                     
-                     <div className = "items-center mt-6">
+                     <div className = "items-center mt-3">
                          <TypewriterEffect words={wordsLine1} className="text-2xl text-neutral-400" continue/>
                     </div>
 
