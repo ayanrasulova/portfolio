@@ -2,7 +2,6 @@ import React from "react";
 import {TypewriterEffect} from "./TypewriterEffect";
 // import { motion } from "motion/react";
 import { motion } from "framer-motion";
-import BuzzEffect from "./ui/buzz";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import FuzzyText from "./ui/fuzzytext";
 
@@ -42,8 +41,7 @@ const HeroText = () => {
   
                 <FuzzyText 
                     baseIntensity={0.06}
-                    hoverIntensity={0.13}
-                    enableHover
+                    enableHover={false}
                     >
                     hi, i'm ion
                 </FuzzyText>
@@ -61,7 +59,7 @@ const HeroText = () => {
                          <TypewriterEffect words={wordsLine2} className="text-2xl text-neutral-400" delay = {2.7}/>
                     </div>
 
-                    <div className = " text-sm  pt-3 mt-3 "> 
+                    <div className = " absolute text-sm  pt-3 mt-24 "> 
                         {/* <button className = "text-sm  hover:bg-neutral-300 hover:text-navbar text-neutral-300 rounded shadow p-1.5 mt-4"> see my projects </button> */}
                         <a href="/projects"><InteractiveHoverButton>see my projects</InteractiveHoverButton></a>
                     </div>                    

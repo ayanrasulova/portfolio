@@ -11,11 +11,11 @@ function Navigation() {
            <a href =  "/projects" className = "nav-link"> projects </a> 
         </li>
         <li className = "nav-li">
-           <a href =  "/creative-work" className = "nav-link"> creative work </a> 
+           <a href =  "/creative-work" className = "nav-link"> creative gallery </a> 
         </li>
-        <li className = "nav-li">
+        {/* <li className = "nav-li">
             <a href =  "/shop" className = "nav-link"> shop </a>
-        </li>
+        </li> */}
         <li className = "nav-li">
            <a href =  "/about" className = "nav-link"> about </a> 
         </li>
