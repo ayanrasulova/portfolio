@@ -43,7 +43,7 @@ const HeroText = () => {
                     baseIntensity={0.06}
                     enableHover={false}
                     >
-                    hi, i'm ion
+                    hi, i'm ayan 
                 </FuzzyText>
 
                 {/* <h1 className = "text-9xl text-neutral-300"> hi, i'm ion </h1> */}
