@@ -18,9 +18,7 @@ const Projects = () => {
           <div className="z-10 mt-15 md:mt-32 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
             <div className = "flex flex-col items-center mt-3"> 
               <p className = "mt-35 text-2xl text-white"> &gt; projects listed below </p>
-                <p className = "pl-25 pr-25 mt-10 text-neutral-400"> chill im going to add them.
-                
-                </p>
+                <p className = "pl-25 pr-25 mt-10 text-neutral-400"> chill im going to add them. </p>
             </div>
            </div>
         </section>
