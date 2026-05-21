@@ -10,32 +10,32 @@ import ProjectsText from "../sections/ProjectsText";
 const projects = [
   {
     index: 1,
-    name: "Thistle",
-    description: "Re-imagining digital art accessibility by turning your hand movements into brushstrokes with computer vision— no tablet, mouse, or stylus needed.",
+    name: "thistle",
+    description: "turning your hand movements into brushstrokes with computer vision",
     image: "src/assets/projects/thistle.jpg",
     tags: ["React", "Python", "Bootstrap", "CSS", "Flask", "Javascript", "Mediapipe", "Node.JS", "OpenCV"],
     devpost: "https://devpost.com/software/thistle-m0so3n",
   },
   {
     index: 2,
-    name: "Big Iron",
-    description: "Computer Vision Powered Prosthetic Limb",
+    name: "big iron",
+    description: "computer vision powered prosthetic limb",
     image: "src/assets/projects/bigiron.jpg",
     tags: ["Python", "YoloV5", "C++", "Arduino", "Torch"],
     devpost: "https://devpost.com/software/big-iron",
   },
   {
     index: 3,
-    name: "Doctor Hoo",
-    description: "AI Medical Chatbot",
+    name: "doctor hoo",
+    description: "ai medical chatbot",
     image: "src/assets/projects/doctorhoo.jpg",
     tags: ["React", "Python", "OpenAI", "SQL", "JavaScript", "Django", "HTML", "CSS"],
     devpost: "https://devpost.com/software/doctor-hoo",
   },
   {
     index: 4,
-    name: "PosturePal",
-    description: "The smart, wearable posture assistant that uses IMU technology to track and correct posture in real-time.",
+    name: "posturepal",
+    description: "the smart, wearable posture assistant that uses imu technology to track and correct posture in real-time.",
     image: "src/assets/projects/posturepal.jpg",
     tags: ["React", "Python", "Django", "Flask"],
     devpost: "https://devpost.com/software/posturepal-r42f0l",
@@ -63,17 +63,21 @@ const Projects = () => {
 
                     {projects.map((project, key) => (
                       <div key={key} 
-                      className = "group rounded-xl bg-background overflow-hidden"> 
+                      className = "group rounded-xl bg-darkerbackground overflow-hidden"> 
                         
                         {/* project titles */}
-                        <div className = "mx-5 my-2 text-white text-xl object-cover transition-transform duration-500 group-hover:scale-101 width-full height-full"> {project.name} </div>
-                        <div className = "h-48 overflow-hidden"> 
+                        <div className = "mx-4 my-3 text-white text-xl object-cover transition-transform duration-500 group-hover:scale-101 w-full height-full"> {project.name} </div>
+                        <div className = "h-48 relative overflow-hidden"> 
 
+                          {/* image */}
                           <img src={project.image} alt={project.name} 
-                        // animation expands inside the grid
-                        // project name on hover
-                           
-                        className="object-cover transition-transform duration-500 group-hover:scale-110 width-full height-full" /> 
+                          className="object-cover transition-transform duration-500 group-hover:scale-107 width-full height-full" /> 
+
+                          {/* description */}
+                          <div className ="absolute mx-4 my-3 inset-0 z-10 text-white opacity-0 group-hover:opacity-100 transition-transform duration-1000 group-hover:scale-101"> {project.description} </div>
+                          
+                          {/* gray hover */}
+                          <div className = "absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-400 group-hover:opacity-100"> </div>
 
                         </div>
 
