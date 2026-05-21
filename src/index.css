@@ -112,7 +112,13 @@ body {
   }
 }
 
+.hidden-image {
+   opacity: 0;
+}
 
+.hidden-image:hover {
+   opacity:1;
+}
 
 .c-space {
   @apply sm:px-10 px-5 lg:px-15;
