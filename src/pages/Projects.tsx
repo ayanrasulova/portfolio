@@ -12,8 +12,9 @@ const projects = [
   {
     index: 1,
     name: "thistle",
-    description: "turning your hand movements into brushstrokes with computer vision",
+    description: "turning your hand movements into brushstrokes with computer vision (first place overall winner girls who hack 2025)",
     image: "src/assets/projects/thistle.jpg",
+    image2: "src/assets/projects/thumbnailthistle.png",
     tags: ["React", "Python", "Bootstrap", "CSS", "Flask", "Javascript", "Mediapipe", "Node.JS", "OpenCV"],
     devpost: "https://devpost.com/software/thistle-m0so3n",
   },
@@ -22,14 +23,16 @@ const projects = [
     name: "big iron",
     description: "computer vision powered prosthetic limb",
     image: "src/assets/projects/bigiron.jpg",
+    image2: "src/assets/projects/thumbnailbigiron.png",
     tags: ["Python", "YoloV5", "C++", "Arduino", "Torch"],
     devpost: "https://devpost.com/software/big-iron",
   },
   {
     index: 3,
     name: "doctor hoo",
-    description: "ai medical chatbot",
+    description: "ai medical chatbot (first place health track hoohacks 2024)",
     image: "src/assets/projects/doctorhoo.jpg",
+    image2: "src/assets/projects/thumbnaildoctorhoo.png",
     tags: ["React", "Python", "OpenAI", "SQL", "JavaScript", "Django", "HTML", "CSS"],
     devpost: "https://devpost.com/software/doctor-hoo",
   },
@@ -38,6 +41,7 @@ const projects = [
     name: "posturepal",
     description: "the smart, wearable posture assistant that uses imu technology to track and correct posture in real-time.",
     image: "src/assets/projects/posturepal.jpg",
+    image2: "src/assets/projects/thumbnailposturepal.png",
     tags: ["React", "Python", "Django", "Flask"],
     devpost: "https://devpost.com/software/posturepal-r42f0l",
   },
@@ -72,11 +76,11 @@ const Projects = () => {
                         
                         <LinkPreview
                           url={project.devpost}
-                          imageSrc={project.image}
+                          imageSrc={project.image2}
                           isStatic={true}
                           className="block"
-                          width={100}
-                          height={100}
+                          width={150}
+                          height={80}
                         >
                           <div className="h-48 relative overflow-hidden">
                             <img
