@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
-import ProjectsText from "../sections/ProjectsText";
+import { LinkPreview } from "../components/ui/link-preview";
+
 
 //function App() { // self closing syntax
  // return <div><Message /></div>
@@ -46,7 +47,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className = "container mx-auto max-w-7xl">
+    <div className = "container mx-auto my-auto max-w-7xl">
         <div className = "z-30"><Navbar /> </div>
         <div className = "z-30"><Footer /> </div>
 
@@ -58,6 +59,7 @@ const Projects = () => {
                 
 
                 <div className = "container mx-auto max-w-5xl">
+
                 {/* displaying projects */}
                   <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -67,19 +69,29 @@ const Projects = () => {
                         
                         {/* project titles */}
                         <div className = "mx-4 my-3 text-white text-xl object-cover transition-transform duration-500 group-hover:scale-101 w-full height-full"> {project.name} </div>
-                        <div className = "h-48 relative overflow-hidden"> 
+                        
+                        <LinkPreview
+                          url={project.devpost}
+                          imageSrc={project.image}
+                          isStatic={true}
+                          className="block"
+                          width={100}
+                          height={100}
+                        >
+                          <div className="h-48 relative overflow-hidden">
+                            <img
+                              src={project.image}
+                              alt={project.name}
+                              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-107"
+                            />
 
-                          {/* image */}
-                          <img src={project.image} alt={project.name} 
-                          className="object-cover transition-transform duration-500 group-hover:scale-107 width-full height-full" /> 
+                            <div className="absolute inset-0 z-10 flex  p-4  text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                              <p className="text-sm">{project.description}</p>
+                            </div>
 
-                          {/* description */}
-                          <div className ="absolute mx-4 my-3 inset-0 z-10 text-white opacity-0 group-hover:opacity-100 transition-transform duration-1000 group-hover:scale-101"> {project.description} </div>
-                          
-                          {/* gray hover */}
-                          <div className = "absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-400 group-hover:opacity-100"> </div>
-
-                        </div>
+                            <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
+                          </div>
+                        </LinkPreview>
 
                         {/* tags */}
                           <div className = "p-4"> 
