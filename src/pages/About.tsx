@@ -3,9 +3,10 @@ import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 import { LinkPreview } from "../components/ui/link-preview";
 
-//function App() { // self closing syntax
- // return <div><Message /></div>
-//}
+// image imports
+import email from "src/assets/projects/email.jpg"
+
+
 
 
 const About = () => {
@@ -23,8 +24,8 @@ const About = () => {
               isStatic={false} className="text-white" width={150} height={80}> fannie mae </LinkPreview>{" "}
 
                 </span>, and also as a <span className = ""> software engineer for uva's </span>{" "}
-              <LinkPreview url="https://thecourseforum.com/" imageSrc="src/assets/projects/thecourseforum.jpg"
-              isStatic={true} className="text-white" width={150} height={80}> thecourseforum. </LinkPreview>{" "}
+              <LinkPreview url="https://thecourseforum.com/" 
+              isStatic={false} className="text-white" width={150} height={80}> thecourseforum. </LinkPreview>{" "}
 
               <br></br>
               <br></br>
@@ -32,7 +33,7 @@ const About = () => {
               <br></br>
               <br></br>
               i am extremely passionate about centering accessiblity within all my projects and volunteer work. feel free to reach out to me at 
-              <LinkPreview url="mailto:ayanfairfax@gmail.com" imageSrc = "src/assets/projects/email.jpg"
+              <LinkPreview url="mailto:ayanfairfax@gmail.com" imageSrc = {email}
               isStatic={true} className="text-white" width={20} height={20}> <span className ="text-white">ayanfairfax@gmail.com</span> </LinkPreview>{" "}
               for any questions or inquiries, or reach me at my other socials at the bottom of the page.
               </p>
