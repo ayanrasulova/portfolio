@@ -277,7 +277,7 @@ export default function FaultyTerminal({
   const pageLoadAnimationRef = useRef<boolean>(pageLoadAnimation);
   const loadAnimationPlayedRef = useRef<boolean>(false);
   const timeStorageKey = 'faultyTerminalTimeOffset';
-  const loadStorageKey = 'faultyTerminalPageLoaded';
+  //const loadStorageKey = 'faultyTerminalPageLoaded';
 
   const tintVec = useMemo(() => hexToRgb(tint), [tint]);
 
@@ -357,7 +357,8 @@ export default function FaultyTerminal({
       }
     }
 
-    const shouldRunPageLoadAnimation = pageLoadAnimation && typeof window !== 'undefined' && !window.sessionStorage.getItem(loadStorageKey);
+    // const shouldRunPageLoadAnimation = pageLoadAnimation && typeof window !== 'undefined' && !window.sessionStorage.getItem(loadStorageKey);
+    const shouldRunPageLoadAnimation = pageLoadAnimation;
     pageLoadAnimationRef.current = shouldRunPageLoadAnimation;
 
     const resizeObserver = new ResizeObserver(() => resize());
@@ -387,9 +388,9 @@ export default function FaultyTerminal({
 
         if (progress >= 1 && !loadAnimationPlayedRef.current) {
           loadAnimationPlayedRef.current = true;
-          if (typeof window !== 'undefined') {
-            window.sessionStorage.setItem(loadStorageKey, 'true');
-          }
+          // if (typeof window !== 'undefined') {
+          //   window.sessionStorage.setItem(loadStorageKey, 'true');
+          // }
         }
       }
 
