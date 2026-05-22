@@ -4,17 +4,17 @@ import Footer from "../sections/Footer";
 import { LinkPreview } from "../components/ui/link-preview";
 
 //image imports 
-import thistleImg from "src/assets/projects/thistle.jpg"
-import thistleThumb from "src/assets/projects/thumbnailthistle.png"
+import thistleImg from "../assets/projects/thistle.jpg"
+import thistleThumb from "../assets/projects/thumbnailthistle.png"
 
-import bigironImg from "src/assets/projects/bigiron.jpg"
-import bigironThumb from "src/assets/projects/thumbnailbigiron.png"
+import bigironImg from "../assets/projects/bigiron.jpg"
+import bigironThumb from "../assets/projects/thumbnailbigiron.png"
 
-import doctorhooImg from "src/assets/projects/doctorhoo.jpg"
-import doctorhooThumb from "src/assets/projects/thumbnaildoctorhoo.png"
+import doctorhooImg from "../assets/projects/doctorhoo.jpg"
+import doctorhooThumb from "../assets/projects/thumbnaildoctorhoo.png"
 
-import posturepalImg from "src/assets/projects/posturepal.jpg"
-import posturepalThumb from "src/assets/projects/thumbnailposturepal.png"
+import posturepalImg from "../assets/projects/posturepal.jpg"
+import posturepalThumb from "../assets/projects/thumbnailposturepal.png"
 
 //function App() { // self closing syntax
  // return <div><Message /></div>
