@@ -5,6 +5,7 @@ import { LinkPreview } from "../components/ui/link-preview";
 
 // image imports
 import email from "../assets/projects/email.jpg"
+import courseforum from "../assets/projects/thecourseforum.jpg"
 
 
 
@@ -24,8 +25,8 @@ const About = () => {
               isStatic={false} className="text-white" width={150} height={80}> fannie mae </LinkPreview>{" "}
 
                 </span>, and also as a <span className = ""> software engineer for uva's </span>{" "}
-              <LinkPreview url="https://thecourseforum.com/" 
-              isStatic={false} className="text-white" width={150} height={80}> thecourseforum. </LinkPreview>{" "}
+              <LinkPreview url="https://thecourseforum.com/" imageSrc = {courseforum}
+              isStatic={true} className="text-white" width={150} height={80}> thecourseforum. </LinkPreview>{" "}
 
               <br></br>
               <br></br>
