@@ -24,9 +24,9 @@ createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
     <div className="fixed inset-0 z--10">
       <FaultyTerminal
-        scale={1.5}
+        scale={2.4}
         gridMul={[2, 1]}
-        digitSize={1.2}
+        digitSize={1.3}
         timeScale={0.2}
         pause={false}
         scanlineIntensity={0.5}
