@@ -2,6 +2,10 @@ import React from "react"
 import {useState} from "react"
 import {motion} from "motion/react" // npm install motion (framer motion)
 
+// import images 
+import close from "../assets/close.svg"
+import menu from "../assets/menu.svg"
+
 function Navigation() {
     return <ul className = "nav-ul">
         <li className = "nav-li">
@@ -38,7 +42,7 @@ const Navbar = () => {
 
                     <button onClick={() => setIsOpen(!isOpen)} // when clicked, change isOpen to opposite of what it is
                         className = "flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"> {/* for smaller devices, button becomes hidden */}
-                        <img src={isOpen ? "src/assets/close.svg" : "src/assets/menu.svg"} className = "w-6 h-6" 
+                        <img src={isOpen ? close : menu} className = "w-6 h-6" 
                         alt = 'toggle'/> {/* create useState (above) for toggle */}
                     </button>
 

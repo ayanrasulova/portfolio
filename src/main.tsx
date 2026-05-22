@@ -24,24 +24,24 @@ createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
     <div className="fixed inset-0 z--10">
       <FaultyTerminal
-          scale={2}
-          gridMul={[3, 1]}
-          digitSize={2}
-          timeScale={0.5}
-          pause={false}
-          scanlineIntensity={0.9}
-          glitchAmount={1}
-          flickerAmount={1}
-          noiseAmp={0.5}
-          chromaticAberration={0}
-          dither={0}
-          curvature={0.4}
-          tint="#ffffff"
-          mouseReact
-          mouseStrength={2}
-          pageLoadAnimation
-          brightness={0.07}
-        />
+        scale={1.5}
+        gridMul={[2, 1]}
+        digitSize={1.2}
+        timeScale={0.2}
+        pause={false}
+        scanlineIntensity={0.5}
+        glitchAmount={1}
+        flickerAmount={1}
+        noiseAmp={1}
+        chromaticAberration={0}
+        dither={0}
+        curvature={0.1}
+        tint="#232423"
+        mouseReact
+        mouseStrength={0.5}
+        pageLoadAnimation
+        brightness={0.4}
+      />
     </div>
   </StrictMode>,
 )
