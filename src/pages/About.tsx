@@ -4,7 +4,7 @@ import Footer from "../sections/Footer";
 import { LinkPreview } from "../components/ui/link-preview";
 
 // image imports
-import email from "src/assets/projects/email.jpg"
+import email from "../assets/projects/email.jpg"
 
 
 
