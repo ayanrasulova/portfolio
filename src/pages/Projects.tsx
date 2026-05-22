@@ -3,6 +3,18 @@ import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 import { LinkPreview } from "../components/ui/link-preview";
 
+//image imports 
+import thistleImg from "src/assets/projects/thistle.jpg"
+import thistleThumb from "src/assets/projects/thumbnailthistle.png"
+
+import bigironImg from "src/assets/projects/bigiron.jpg"
+import bigironThumb from "src/assets/projects/thumbnailbigiron.png"
+
+import doctorhooImg from "src/assets/projects/doctorhoo.jpg"
+import doctorhooThumb from "src/assets/projects/thumbnaildoctorhoo.png"
+
+import posturepalImg from "src/assets/projects/posturepal.jpg"
+import posturepalThumb from "src/assets/projects/thumbnailposturepal.png"
 
 //function App() { // self closing syntax
  // return <div><Message /></div>
@@ -13,8 +25,8 @@ const projects = [
     index: 1,
     name: "thistle",
     description: "turning your hand movements into brushstrokes with computer vision (first place overall winner girls who hack 2025)",
-    image: "src/assets/projects/thistle.jpg",
-    image2: "src/assets/projects/thumbnailthistle.png",
+    image: thistleImg,
+    image2: thistleThumb, 
     tags: ["React", "Python", "Bootstrap", "CSS", "Flask", "Javascript", "Mediapipe", "Node.JS", "OpenCV"],
     devpost: "https://devpost.com/software/thistle-m0so3n",
   },
@@ -22,8 +34,8 @@ const projects = [
     index: 2,
     name: "big iron",
     description: "computer vision powered prosthetic limb",
-    image: "src/assets/projects/bigiron.jpg",
-    image2: "src/assets/projects/thumbnailbigiron.png",
+    image: bigironImg,
+    image2: bigironThumb,
     tags: ["Python", "YoloV5", "C++", "Arduino", "Torch"],
     devpost: "https://devpost.com/software/big-iron",
   },
@@ -31,8 +43,8 @@ const projects = [
     index: 3,
     name: "doctor hoo",
     description: "ai medical chatbot (first place health track hoohacks 2024)",
-    image: "src/assets/projects/doctorhoo.jpg",
-    image2: "src/assets/projects/thumbnaildoctorhoo.png",
+    image: doctorhooImg,
+    image2: doctorhooThumb,
     tags: ["React", "Python", "OpenAI", "SQL", "JavaScript", "Django", "HTML", "CSS"],
     devpost: "https://devpost.com/software/doctor-hoo",
   },
@@ -40,8 +52,8 @@ const projects = [
     index: 4,
     name: "posturepal",
     description: "the smart, wearable posture assistant that uses imu technology to track and correct posture in real-time.",
-    image: "src/assets/projects/posturepal.jpg",
-    image2: "src/assets/projects/thumbnailposturepal.png",
+    image: posturepalImg,
+    image2: posturepalThumb,
     tags: ["React", "Python", "Django", "Flask"],
     devpost: "https://devpost.com/software/posturepal-r42f0l",
   },
