@@ -16,9 +16,6 @@ import doctorhooThumb from "../assets/projects/thumbnaildoctorhoo.png"
 import posturepalImg from "../assets/projects/posturepal.jpg"
 import posturepalThumb from "../assets/projects/thumbnailposturepal.png"
 
-//function App() { // self closing syntax
- // return <div><Message /></div>
-//}
 
 const projects = [
   {

@@ -1,17 +1,27 @@
 import { useState, type FC } from "react";
 
+// image imports 
+
+import fitz from "../assets/creativeworkimages/singleusefitzshow.jpg"
+import valentines from "../assets/creativeworkimages/valentines2026green.jpg"
+import indie1 from "../assets/creativeworkimages/indieheadsimg.jpg"
+import indie2 from "../assets/creativeworkimages/indieheads2.jpg"
+import indiecake from "../assets/creativeworkimages/indieheadscakeonlawn.jpg"
+import silenthill from "../assets/creativeworkimages/silenthill.jpg"
+import v2 from "../assets/creativeworkimages/v2.jpg" 
+
 type Panel = {
   image: string;
 };
 
 const panels: Panel[] = [
-  { image: "src/assets/creativeworkimages/singleusefitzshow.jpg" },
-  { image: "src/assets/creativeworkimages/valentines2026green.jpg" },
-  { image: "src/assets/creativeworkimages/indieheadsimg.jpg" },
-  { image: "src/assets/creativeworkimages/indieheads2.jpg" },
-  { image: "src/assets/creativeworkimages/indieheadscakeonlawn.jpg" },
-  { image: "src/assets/creativeworkimages/silenthill.jpg" },
-  { image: "src/assets/creativeworkimages/v2.jpg" },
+  { image: fitz },
+  { image: valentines },
+  { image: indie1 },
+  { image: indie2 },
+  { image: indiecake },
+  { image: silenthill },
+  { image: v2 },
 ];
 
 const CreativeGrid: FC = () => {
