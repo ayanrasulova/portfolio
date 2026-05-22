@@ -99,6 +99,7 @@ export const LinkPreview = ({
             onMouseMove={handleMouseMove}
             className={cn("group inline-block text-black dark:text-white", className)}
             href={url}
+            target="_blank"
           >
             {children}
           </a>
