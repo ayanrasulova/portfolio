@@ -80,9 +80,12 @@ const HeroText = () => {
 
             {/* mobile */}
             <div className ="padded-box flex flex-col items-center text-center mt-10 space-y-0.3 md:hidden"> {/* c-space */}
-                <FuzzyText className = "scale-120  mt-50"
-                    baseIntensity={0.06}
-                    hoverIntensity={0.13}
+                <FuzzyText className = "mt-50"
+                    fontSize="clamp(3rem, 14vw, 5rem)"
+                    fontWeight={700}
+                    fps={30}
+                    baseIntensity={0.05}
+                    hoverIntensity={0.1}
                     >
                     hi, i'm ion
                 </FuzzyText>
