@@ -67,11 +67,11 @@ const Projects = () => {
         <section className = "relative flex flex-col bg-black min-h-screen overscroll-none noscroll px-5 sm:px-8 lg:px-16"> 
           <div className="z-10  md:my-auto items-start md:text-left rounded-3xl bg-clip-text  mt-15 md:mt-32 lg:mt-26 pl-0 ml-0"> 
             <div className = "flex flex-col items-center"> 
-              <p className = "mt-15 md:mt-0 lg:mt-0 text-2xl text-white"> &gt; projects </p>
-                <p className = "pl-25 pr-25 mt-2 mb-5 text-neutral-400"> highlights from hackathons & independent work </p>
+              <p className = "mt-6 md:mt-0 lg:mt-0 text-2xl text-white"> &gt; projects </p>
+                <p className = "text-center pl-2 pr-2 md:pl-25 md:pr-25 mt-2 mb-5 text-neutral-400"> highlights from hackathons & independent work </p>
                 
 
-                <div className = "container mx-auto max-w-5xl">
+                <div className = "pb-20 container mx-auto max-w-5xl">
 
                 {/* displaying projects */}
                   <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
