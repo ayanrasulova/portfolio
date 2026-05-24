@@ -53,18 +53,49 @@ const Navbar = () => {
             </div>
 
             {/* navigation to show whenever user clicks on the menu icon, otherwise hide it */}
-          {isOpen && ( // if it is open, this will execute
-          <motion.div className = "block overflow-hidden text-center sm:hidden"
-          initial={{ opacity:0, x: -10}}
-          animate = {{opacity: 1, x:0}}
-          style = {{maxHeight:"100vh"}}
-          transition = {{ duration:1}}
-          >
-            <nav className = "pb-5>">
-                <Navigation />
-            </nav>
-          </motion.div> 
-          )}
+          {isOpen && (
+            <motion.div
+                className="absolute right-2 top-16 z-50 sm:hidden"
+                initial={{ x: 35 }}
+                animate={{ x: 0 }}
+                exit={{ x: 35 }}
+                transition={{
+                type: "spring", // springs when opens
+                stiffness: 320,
+                damping: 20,
+                }}
+            >
+                <div className="terminal-popup">
+                <nav className="terminal-body">
+                    <ul className="flex flex-col gap-6">
+                    <li>
+                        <a href="/" className="terminal-link">
+                        &gt; home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/projects" className="terminal-link">
+                        &gt; projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/creative-work" className="terminal-link">
+                        &gt; creative gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/about" className="terminal-link">
+                        &gt; about
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
+                </div>
+            </motion.div>
+            )}
 
         </div> 
     ) 

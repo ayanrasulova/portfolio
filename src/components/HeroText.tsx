@@ -47,7 +47,7 @@ import FuzzyText from "./ui/fuzzytext";
   
 const HeroText = () => {
     return ( // added pt-30 for space from top, going to try to change the font size             
-        <div className="z-10 mt-15 md:mt-32 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
+        <div className="z-10 mt-15 md:mt-32 items-center text-center  rounded-3xl bg-clip-text pl-0 ml-0"> 
 
 
             {/* desktop */}
@@ -79,7 +79,7 @@ const HeroText = () => {
 
 
             {/* mobile */}
-            <div className ="flex flex-col items-center text-center mt-10 space-y-0.3 px-3 pr-10 pl-10 md:hidden"> {/* c-space */}
+            <div className ="padded-box flex flex-col items-center text-center mt-10 space-y-0.3 md:hidden"> {/* c-space */}
                 <FuzzyText className = "scale-120  mt-50"
                     baseIntensity={0.06}
                     hoverIntensity={0.13}

@@ -83,12 +83,43 @@ body {
   /*ALTERNATIVE FONT font-family:   "Road Rage", sans-serif; */
 
   font-family: "Lato", sans-serif;
+  font-family: monospace;
   /* color: rgb(255, 255, 255); */
   scroll-behavior: smooth;
-  /* overscroll-behavior: none; */
+  overscroll-behavior: none;
   overflow-x: hidden;
 
 
+}
+
+.terminal-popup {
+  width: 280px;
+  background: #000000;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+}
+
+.terminal-link {
+  color: white;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  transition:
+    transform 0.18s ease,
+    color 0.18s ease;
+}
+
+.terminal-link:hover {
+  transform: translateX(6px);
+  color: #d1d5db;
 }
 
 
