@@ -75,12 +75,14 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
       if (typeof fontSize === 'number') {
         numericFontSize = fontSize;
       } else {
+
         const temp = document.createElement('span');
         temp.style.fontSize = fontSize;
         document.body.appendChild(temp);
         const computedSize = window.getComputedStyle(temp).fontSize;
         numericFontSize = parseFloat(computedSize);
         document.body.removeChild(temp);
+        
       }
 
       const text = React.Children.toArray(children).join('');
@@ -141,8 +143,20 @@ const FuzzyText: React.FC<FuzzyTextProps> = ({
 
       const horizontalMargin = fuzzRange + 20;
       const verticalMargin = direction === 'vertical' || direction === 'both' ? fuzzRange + 10 : 0;
-      canvas.width = offscreenWidth + horizontalMargin * 2;
-      canvas.height = tightHeight + verticalMargin * 2;
+
+      const dpr = window.devicePixelRatio || 1;
+
+      // updating scaling for mobile view
+      canvas.width = (offscreenWidth + horizontalMargin * 2) * dpr;
+      canvas.height = (tightHeight + verticalMargin * 2) * dpr;
+      canvas.style.display = "block";
+      canvas.style.maxWidth = "100%";
+
+      canvas.style.width = `${offscreenWidth + horizontalMargin * 2}px`;
+      canvas.style.height = `${tightHeight + verticalMargin * 2}px`;
+
+      ctx.scale(dpr, dpr);
+      
       ctx.translate(horizontalMargin, verticalMargin);
 
       const interactiveLeft = horizontalMargin + xOffset;
