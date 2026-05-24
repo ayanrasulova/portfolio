@@ -60,14 +60,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className = "container mx-auto my-auto max-w-7xl">
+    <div className = "container mx-auto max-w-7xl">
         <div className = "z-30"><Navbar /> </div>
         <div className = "z-30"><Footer /> </div>
 
         <section className = "relative flex flex-col bg-black min-h-screen overscroll-none noscroll px-5 sm:px-8 lg:px-16"> 
-          <div className="z-10 my-auto md:my-auto items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
+          <div className="z-10  md:my-auto items-start md:text-left rounded-3xl bg-clip-text  mt-15 md:mt-32 lg:mt-26 pl-0 ml-0"> 
             <div className = "flex flex-col items-center"> 
-              <p className = "my-auto text-2xl text-white"> &gt; projects </p>
+              <p className = "mt-15 md:mt-0 lg:mt-0 text-2xl text-white"> &gt; projects </p>
                 <p className = "pl-25 pr-25 mt-2 mb-5 text-neutral-400"> highlights from hackathons & independent work </p>
                 
 

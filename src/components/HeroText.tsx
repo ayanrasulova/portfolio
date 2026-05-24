@@ -29,6 +29,20 @@ import FuzzyText from "./ui/fuzzytext";
     { text: "my"},
     { text: "projects"},
   ]
+
+  const mobileLine2 = [
+    { text: "current" },
+    { text: "fullstack" },
+    { text: "dev" },
+    { text: "@" },
+    { text: "thecourseforum", className: "text-white" },
+  ]
+  
+  const mobileLine3 = [
+    { text: "&" },
+    { text: "fannie", className: "text-white" },
+    { text: "mae", className: "text-white" },
+  ]
   
   
 const HeroText = () => {
@@ -66,7 +80,7 @@ const HeroText = () => {
 
             {/* mobile */}
             <div className ="flex flex-col items-center text-center mt-10 space-y-0.3 px-3 pr-10 pl-10 md:hidden"> {/* c-space */}
-                <FuzzyText className = "mt-50"
+                <FuzzyText className = "scale-120  mt-50"
                     baseIntensity={0.06}
                     hoverIntensity={0.13}
                     >
@@ -75,15 +89,19 @@ const HeroText = () => {
 
                 <div className = "flex flex-col pt-3 items-center"> 
 
-                    <div className = "items-center mt-2">
+                    <div className = "items-center text-sm mt-2">
                          <TypewriterEffect words={wordsLine1} className=" text-neutral-400" continue/>
                     </div>
 
-                    <div className = "items-center">
-                         <TypewriterEffect words={wordsLine2} className=" text-neutral-400" delay = {2.7}/>
+                    <div className = "items-center text-sm">
+                         <TypewriterEffect words={mobileLine2} className=" text-neutral-400" delay = {2.7} continue/>
                     </div>
 
-                    <div className = " text-sm  pt-3 mt-3 "> 
+                    <div className = "items-center text-sm">
+                         <TypewriterEffect words={mobileLine3} className=" text-neutral-400" delay = {5.4}/>
+                    </div>
+
+                    <div className = " text-sm  pt-1 mt-3 "> 
                         <a href = "/projects"> <InteractiveHoverButton>see my projects</InteractiveHoverButton> </a> 
                     </div>   
 

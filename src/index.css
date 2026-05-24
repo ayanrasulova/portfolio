@@ -85,7 +85,7 @@ body {
   font-family: "Lato", sans-serif;
   /* color: rgb(255, 255, 255); */
   scroll-behavior: smooth;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   overflow-x: hidden;
 
 
