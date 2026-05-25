@@ -79,7 +79,7 @@ const HeroText = () => {
 
 
             {/* mobile */}
-            <div className ="padded-box flex flex-col items-center text-center mt-10 space-y-0.3 md:hidden"> {/* c-space */}
+            <div className ="padded-box flex flex-col items-center text-center mt-5 space-y-0.3 md:hidden"> {/* c-space */}
                 <FuzzyText className = "scale-200 mt-50"
                     fontSize="clamp(3rem, 14vw, 5rem)"
                     fontWeight={700}
@@ -96,7 +96,7 @@ const HeroText = () => {
                          <TypewriterEffect words={wordsLine1} className=" text-neutral-400" continue/>
                     </div>
 
-                    <div className = "items-center text-sm">
+                    <div className = "items-center pt-1.5 text-sm">
                          <TypewriterEffect words={mobileLine2} className=" text-neutral-400" delay = {2.7} continue/>
                     </div>
 
