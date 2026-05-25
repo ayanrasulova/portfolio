@@ -33,8 +33,7 @@ const About = () => {
               i have experience with multiple hackathons (2x mlh winner). in the past, i have interned as a startup accelerator intern for cybersecurity training company skillbit, and as an edtech intern for the nonprofit meducation alliance. i am currently on the executive board for music appreciation club indieheads @ uva (where i work as a creative director), and am a PR committee member for girls who code at uva. 
               <br></br>
               <br></br>
-              i am extremely passionate about centering accessiblity within all my projects and volunteer work. feel free to reach out to me at 
-              <LinkPreview url="mailto:ayanfairfax@gmail.com" imageSrc = {email}
+              i am extremely passionate about centering accessiblity within all my projects and volunteer work. feel free to reach out to me at&nbsp;<LinkPreview url="mailto:ayanfairfax@gmail.com" imageSrc = {email}
               isStatic={true} className="text-white" width={20} height={20}> <span className ="text-white"> <span> </span>ayanfairfax@gmail.com</span> </LinkPreview>{" "}
               for any questions or inquiries, or reach me at my other socials at the bottom of the page.
               </p>
