@@ -65,7 +65,7 @@ const Projects = () => {
         <div className = "z-30"><Footer /> </div>
 
         <section className = "relative flex flex-col bg-black min-h-screen overscroll-none noscroll px-5 sm:px-8 lg:px-16"> 
-          <div className="z-10  md:my-auto items-start md:text-left rounded-3xl bg-clip-text  mt-15 md:mt-32 lg:mt-25 pl-0 ml-0"> 
+          <div className="z-10  md:my-auto items-start md:text-left rounded-3xl bg-clip-text  mt-15 md:mt-18 md:mb-1.5 pl-0 ml-0"> 
             <div className = "flex flex-col items-center"> 
               <p className = "mt-6 md:mt-0 lg:mt-0 text-2xl text-white"> &gt; projects </p>
                 <p className = "text-center pl-2 pr-2 md:pl-25 md:pr-25 mt-2 mb-5 text-neutral-400"> highlights from hackathons & independent work </p>
