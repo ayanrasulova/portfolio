@@ -30,19 +30,19 @@ const projects = [
   {
     index: 2,
     name: "big iron",
-    description: "computer vision powered prosthetic limb",
+    description: "computer-vision powered prosthetic limb (<$40 budget)",
     image: bigironImg,
     image2: bigironThumb,
-    tags: ["Python", "YoloV5", "C++", "Arduino", "Torch"],
+    tags: ["Python", "YoloV5", "C++", "Arduino", "PyTorch", "Ultralytics"],
     devpost: "https://devpost.com/software/big-iron",
   },
   {
     index: 3,
     name: "doctor hoo",
-    description: "ai medical chatbot (first place health track hoohacks 2024)",
+    description: "user-friendly medical chatbot for uva's health department (first place health track hoohacks 2024)",
     image: doctorhooImg,
     image2: doctorhooThumb,
-    tags: ["React", "Python", "OpenAI", "SQL", "JavaScript", "Django", "HTML", "CSS"],
+    tags: ["React", "Python", "OpenAI", "SQL", "JavaScript", "Django", "HTML", "CSS", "Vite"],
     devpost: "https://devpost.com/software/doctor-hoo",
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     description: "the smart, wearable posture assistant that uses imu technology to track and correct posture in real-time.",
     image: posturepalImg,
     image2: posturepalThumb,
-    tags: ["React", "Python", "Django", "Flask"],
+    tags: ["React", "Python", "Django", "Flask", "Javascript", "Matplotlib", "HTML", "CSS"],
     devpost: "https://devpost.com/software/posturepal-r42f0l",
   },
 
