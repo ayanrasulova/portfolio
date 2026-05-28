@@ -104,7 +104,7 @@ const HeroText = () => {
                          <TypewriterEffect words={mobileLine3} className=" text-neutral-400" delay = {5.4}/>
                     </div>
 
-                    <div className = " text-sm  pt-3 mt-3 "> 
+                    <div className = " text-sm absolute pt-2 mt-3 "> 
                         <a href = "/projects"> <InteractiveHoverButton>see my projects</InteractiveHoverButton> </a> 
                     </div>   
 
