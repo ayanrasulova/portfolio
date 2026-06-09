@@ -21,6 +21,9 @@ import FuzzyText from "./ui/fuzzytext";
     { text: "@" },
     { text: "thecourseforum", className: "text-white" },
     { text: "&" },
+    { text: "devops" },
+    { text: "engineer" },
+    { text: "@" },
     { text: "fannie", className: "text-white" },
     { text: "mae", className: "text-white" },
   ];
@@ -40,6 +43,8 @@ import FuzzyText from "./ui/fuzzytext";
   
   const mobileLine3 = [
     { text: "&" },
+    { text: "devops" },
+    { text: "@" },
     { text: "fannie", className: "text-white" },
     { text: "mae", className: "text-white" },
   ]
