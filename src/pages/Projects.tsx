@@ -70,7 +70,7 @@ const projects = [
     image2: gamePreview,
     tags: ["Godot", "GDScript", "Adobe Photoshop", "Audacity"],
     devpost: "https://github.com/ayanrasulova/pixel-car-game",
-    hasLink: true,
+    hasLink: false,
   },
   {
     index: 6,
