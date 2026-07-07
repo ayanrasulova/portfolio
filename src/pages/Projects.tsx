@@ -16,6 +16,8 @@ import doctorhooThumb from "../assets/projects/thumbnaildoctorhoo.png"
 import posturepalImg from "../assets/projects/posturepal.jpg"
 import posturepalThumb from "../assets/projects/thumbnailposturepal.png"
 
+import gamePreview from "../assets/projects/gamepreview.jpg"
+
 
 const projects = [
   {
@@ -53,6 +55,15 @@ const projects = [
     image2: posturepalThumb,
     tags: ["React", "Python", "Django", "Flask", "Javascript", "Matplotlib", "HTML", "CSS"],
     devpost: "https://devpost.com/software/posturepal-r42f0l",
+  },
+  {
+    index: 5,
+    name: "work in progress game",
+    description: "coming soon... currently in development :)",
+    image: gamePreview,
+    image2: gamePreview,
+    tags: ["Godot", "GDScript", "Adobe Photoshop", "Audacity"],
+    devpost: "https://github.com/ayanrasulova/pixel-car-game",
   },
 
 ];
