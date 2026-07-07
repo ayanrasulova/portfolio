@@ -18,6 +18,8 @@ import posturepalThumb from "../assets/projects/thumbnailposturepal.png"
 
 import gamePreview from "../assets/projects/gamepreview.jpg"
 
+import terminal from "../assets/projects/terminal.jpg"
+
 
 const projects = [
   {
@@ -64,6 +66,14 @@ const projects = [
     image2: gamePreview,
     tags: ["Godot", "GDScript", "Adobe Photoshop", "Audacity"],
     devpost: "https://github.com/ayanrasulova/pixel-car-game",
+  },
+  {
+    index: 6,
+    name: "home lab",
+    description: "home lab running ubuntu distro, with file & media storage, and self hosting",
+    image: terminal,
+    image2: terminal,
+    tags: ["Linux", "Bash", "Networking", "Docker"],
   },
 
 ];
