@@ -30,6 +30,7 @@ const projects = [
     image2: thistleThumb, 
     tags: ["React", "Python", "Bootstrap", "CSS", "Flask", "Javascript", "Mediapipe", "Node.JS", "OpenCV"],
     devpost: "https://devpost.com/software/thistle-m0so3n",
+    hasLink: true,
   },
   {
     index: 2,
@@ -39,6 +40,7 @@ const projects = [
     image2: bigironThumb,
     tags: ["Python", "YoloV5", "C++", "Arduino", "PyTorch", "Ultralytics"],
     devpost: "https://devpost.com/software/big-iron",
+    hasLink: true,
   },
   {
     index: 3,
@@ -48,6 +50,7 @@ const projects = [
     image2: doctorhooThumb,
     tags: ["React", "Python", "OpenAI", "SQL", "JavaScript", "Django", "HTML", "CSS", "Vite"],
     devpost: "https://devpost.com/software/doctor-hoo",
+    hasLink: true,
   },
   {
     index: 4,
@@ -57,6 +60,7 @@ const projects = [
     image2: posturepalThumb,
     tags: ["React", "Python", "Django", "Flask", "Javascript", "Matplotlib", "HTML", "CSS"],
     devpost: "https://devpost.com/software/posturepal-r42f0l",
+    hasLink: true,
   },
   {
     index: 5,
@@ -66,15 +70,17 @@ const projects = [
     image2: gamePreview,
     tags: ["Godot", "GDScript", "Adobe Photoshop", "Audacity"],
     devpost: "https://github.com/ayanrasulova/pixel-car-game",
+    hasLink: true,
   },
   {
     index: 6,
     name: "home lab",
-    description: "home lab running ubuntu distro, with file & media storage, and self hosting",
+    description: "home lab running ubuntu distro, with file & media storage, self hosting, identity & access management",
     image: terminal,
     image2: terminal,
     tags: ["Linux", "Bash", "Networking", "Docker"],
-    devpost: "",
+    devpost: "https://github.com/ayanrasulova/pixel-car-game",
+    hasLink: false,
   },
 
 ];
@@ -105,28 +111,46 @@ const Projects = () => {
                         {/* project titles */}
                         <div className = "mx-4 my-3 text-white text-xl object-cover transition-transform duration-500 group-hover:scale-101 w-full height-full"> {project.name} </div>
                         
-                        <LinkPreview
-                          url={project.devpost}
-                          imageSrc={project.image2}
-                          isStatic={true}
-                          className="block"
-                          width={150}
-                          height={80}
-                        >
-                          <div className="h-48 relative overflow-hidden">
-                            <img
-                              src={project.image}
-                              alt={project.name}
-                              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-107"
-                            />
+                        {project.hasLink ? (
+                          <LinkPreview
+                            url={project.devpost}
+                            imageSrc={project.image2}
+                            isStatic={true}
+                            className="block"
+                            width={150}
+                            height={80}
+                          >
+                            <div className="h-48 relative overflow-hidden">
+                              <img
+                                src={project.image}
+                                alt={project.name}
+                                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-107"
+                              />
 
-                            <div className="absolute inset-0 z-10 flex  p-4  text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                              <p className="text-sm">{project.description}</p>
+                              <div className="absolute inset-0 z-10 flex  p-4  text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                                <p className="text-sm">{project.description}</p>
+                              </div>
+
+                              <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
                             </div>
+                          </LinkPreview>
+                        ) : (
+                          <div className="block">
+                            <div className="h-48 relative overflow-hidden">
+                              <img
+                                src={project.image}
+                                alt={project.name}
+                                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-107"
+                              />
 
-                            <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
+                              <div className="absolute inset-0 z-10 flex  p-4  text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                                <p className="text-sm">{project.description}</p>
+                              </div>
+
+                              <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
+                            </div>
                           </div>
-                        </LinkPreview>
+                        )}
 
                         {/* tags */}
                           <div className = "p-4"> 
