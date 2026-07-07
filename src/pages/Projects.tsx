@@ -74,6 +74,7 @@ const projects = [
     image: terminal,
     image2: terminal,
     tags: ["Linux", "Bash", "Networking", "Docker"],
+    devpost: "",
   },
 
 ];
