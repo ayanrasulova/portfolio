@@ -1,4 +1,4 @@
-import { useState, type FC } from "react";
+import { useState, useRef, type FC } from "react";
 
 // image imports 
 
@@ -51,6 +51,43 @@ const CreativeGrid: FC = () => {
     if (!inVisible) setExpandedIndex(newStart);
   };
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState<number>(0);
+
+  const openModal = (index: number) => {
+    setModalIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => setModalOpen(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const SWIPE_THRESHOLD = 50;
+
+  const nextModal = () => setModalIndex((i) => (i + 1) % panels.length);
+  const prevModal = () => setModalIndex((i) => (i - 1 + panels.length) % panels.length);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current == null || touchEndX.current == null) return;
+    const delta = touchStartX.current - touchEndX.current;
+    if (delta > SWIPE_THRESHOLD) {
+      nextModal();
+    } else if (delta < -SWIPE_THRESHOLD) {
+      prevModal();
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
     <main className="w-screen h-screen overflow-hidden flex items-center justify-center">
       {/* mobile view (vertical) */}
@@ -58,20 +95,38 @@ const CreativeGrid: FC = () => {
         {panels.map((panel, index) => (
           <div
             key={index}
-            onClick={() => handleClick(index)}
-            className={`w-full rounded-2xl bg-black cursor-pointer transition-all duration-500 ease-in-out overflow-hidden ${
-              expandedIndex === index ? "h-full" : "h-[10%]"
-            } min-h-[40px] block`}
+            onClick={() => openModal(index)}
+            className={`w-full rounded-2xl bg-black cursor-pointer transition-all duration-500 ease-in-out overflow-hidden h-[10%] min-h-[40px] block`}
           >
-            <img
-              loading="lazy"
-              src={panel.image}
-              alt={`panel-${index}`}
-              className={`${expandedIndex === index ? "w-full h-full object-contain object-top" : "w-full h-full object-cover object-top"}`}
-            />
+            <img loading="lazy" src={panel.image} alt={`panel-${index}`} className="w-full h-full object-cover object-top" />
           </div>
         ))}
       </div>
+
+      {/* mobile full-screen modal */}
+      {modalOpen && (
+        <div
+          className="md:hidden fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          style={{ touchAction: "pan-y" }}
+        >
+          <button
+            aria-label="close"
+            onClick={closeModal}
+            className="absolute right-4 top-4 z-50 text-white bg-transparent hover:bg-white/10 p-3 rounded-full border border-white/20"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div className="max-h-full w-full flex items-center justify-center">
+            <img src={panels[modalIndex].image} alt={`modal-${modalIndex}`} className="max-w-full max-h-full object-contain" />
+          </div>
+        </div>
+      )}
 
       {/* desktop view (carousel with animated panels) */}
       <div className="hidden md:block w-full max-w-7xl h-[80vh] relative mx-auto my-auto">
