@@ -63,7 +63,12 @@ const CreativeGrid: FC = () => {
               expandedIndex === index ? "h-full" : "h-[10%]"
             } min-h-[40px] block`}
           >
-            <img loading="lazy" src={panel.image} alt={`panel-${index}`} className="w-full h-full object-cover object-top" />
+            <img
+              loading="lazy"
+              src={panel.image}
+              alt={`panel-${index}`}
+              className={`${expandedIndex === index ? "w-full h-full object-contain object-top" : "w-full h-full object-cover object-top"}`}
+            />
           </div>
         ))}
       </div>
