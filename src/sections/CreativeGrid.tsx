@@ -53,13 +53,35 @@ const CreativeGrid: FC = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState<number>(0);
+  const [modalStartHeight, setModalStartHeight] = useState<number | null>(null);
+  const [modalWidth, setModalWidth] = useState<number | null>(null);
+  const [modalExpanded, setModalExpanded] = useState(false);
 
-  const openModal = (index: number) => {
+  const openModal = (index: number, el?: HTMLElement | null) => {
     setModalIndex(index);
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      setModalStartHeight(rect.height);
+      setModalWidth(rect.width);
+    } else {
+      setModalStartHeight(100);
+      setModalWidth(null);
+    }
     setModalOpen(true);
+    // trigger expand on next tick
+    requestAnimationFrame(() => requestAnimationFrame(() => setModalExpanded(true)));
   };
 
-  const closeModal = () => setModalOpen(false);
+  const closeModal = () => {
+    // reverse animation then close
+    setModalExpanded(false);
+    // wait for transition duration (match CSS below 350ms)
+    setTimeout(() => {
+      setModalOpen(false);
+      setModalStartHeight(null);
+      setModalWidth(null);
+    }, 350);
+  };
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
   const SWIPE_THRESHOLD = 50;
@@ -95,7 +117,7 @@ const CreativeGrid: FC = () => {
         {panels.map((panel, index) => (
           <div
             key={index}
-            onClick={() => openModal(index)}
+            onClick={(e) => openModal(index, e.currentTarget as HTMLElement)}
             className={`w-full rounded-2xl bg-black cursor-pointer transition-all duration-500 ease-in-out overflow-hidden h-[10%] min-h-[40px] block`}
           >
             <img loading="lazy" src={panel.image} alt={`panel-${index}`} className="w-full h-full object-cover object-top" />
@@ -106,27 +128,49 @@ const CreativeGrid: FC = () => {
       {/* mobile full-screen modal */}
       {modalOpen && (
         <div
-          className="md:hidden fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          className={`md:hidden fixed inset-0 z-50 flex items-center justify-center p-4`}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           style={{ touchAction: "pan-y" }}
         >
-          {/* removed duplicate outer close button - image wrapper contains the close button */}
+          {/* overlay */}
+          <div
+            className="absolute inset-0 bg-black"
+            style={{
+              transition: "opacity 350ms ease",
+              opacity: modalExpanded ? 0.95 : 0,
+            }}
+          />
 
-          <div className="max-h-full w-full flex items-center justify-center">
-            <div className="relative max-w-full max-h-full flex items-center justify-center">
+          <div className="max-h-full w-full flex items-start justify-center">
+            <div
+              className="relative flex items-start justify-center overflow-hidden"
+              style={{
+                width: modalWidth ? `${modalWidth}px` : "90%",
+                transformOrigin: "top center",
+                transform: modalStartHeight ? `scaleY(${modalExpanded ? 1 : modalStartHeight / window.innerHeight})` : undefined,
+                transition: "transform 350ms cubic-bezier(.2,.8,.2,1)",
+                maxHeight: modalExpanded ? "100vh" : modalStartHeight ? `${modalStartHeight}px` : undefined,
+              }}
+            >
+              {/* close button over the image */}
               <button
                 aria-label="close"
                 onClick={closeModal}
                 className="absolute top-2 right-2 z-50 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
+                style={{
+                  transition: "opacity 300ms ease, transform 300ms ease",
+                  opacity: modalExpanded ? 1 : 0,
+                  transform: modalExpanded ? "scale(1)" : "scale(.8)",
+                }}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
 
-              <img src={panels[modalIndex].image} alt={`modal-${modalIndex}`} className="max-w-full max-h-full object-contain" />
+              <img src={panels[modalIndex].image} alt={`modal-${modalIndex}`} className="block max-w-full object-contain" style={{ width: "100%", height: "100%" }} />
             </div>
           </div>
         </div>
