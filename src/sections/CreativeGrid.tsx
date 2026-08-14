@@ -112,18 +112,22 @@ const CreativeGrid: FC = () => {
           onTouchEnd={handleTouchEnd}
           style={{ touchAction: "pan-y" }}
         >
-          <button
-            aria-label="close"
-            onClick={closeModal}
-            className="absolute right-4 top-4 z-50 text-white bg-transparent hover:bg-white/10 p-3 rounded-full border border-white/20"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+          {/* removed duplicate outer close button - image wrapper contains the close button */}
 
           <div className="max-h-full w-full flex items-center justify-center">
-            <img src={panels[modalIndex].image} alt={`modal-${modalIndex}`} className="max-w-full max-h-full object-contain" />
+            <div className="relative max-w-full max-h-full flex items-center justify-center">
+              <button
+                aria-label="close"
+                onClick={closeModal}
+                className="absolute top-2 right-2 z-50 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <img src={panels[modalIndex].image} alt={`modal-${modalIndex}`} className="max-w-full max-h-full object-contain" />
+            </div>
           </div>
         </div>
       )}
@@ -157,11 +161,21 @@ const CreativeGrid: FC = () => {
               const isExpanded = idx === expandedIndex;
               return (
                 <div key={idx} className="h-full p-1 transition-all duration-500" style={{ flex: isExpanded ? 6 : 1, minWidth: 0 }}>
-                  <div
-                    onClick={() => handleClick(idx)}
-                    className={`h-full rounded-xl bg-black cursor-pointer overflow-hidden border border-transparent hover:border-white/20 transition-all duration-500`}
-                  >
-                    <img loading="lazy" src={panels[idx].image} alt={`panel-${idx}`} className="w-full h-full object-cover object-center" />
+                  <div className={`h-full rounded-xl bg-black cursor-pointer overflow-hidden border border-transparent hover:border-white/20 transition-all duration-500 relative`}>
+                    {isExpanded && (
+                      <button
+                        aria-label="close-expanded"
+                        onClick={() => setExpandedIndex(-1)}
+                        className="absolute top-2 right-2 z-40 bg-black text-white w-9 h-9 rounded-full flex items-center justify-center shadow-md"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    )}
+                    <div onClick={() => handleClick(idx)} className="w-full h-full">
+                      <img loading="lazy" src={panels[idx].image} alt={`panel-${idx}`} className="w-full h-full object-cover object-center" />
+                    </div>
                   </div>
                 </div>
               );
