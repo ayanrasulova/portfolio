@@ -20,7 +20,7 @@ const About = () => {
           <div className="z-10 mt-15 md:mt-32 items-start md:text-left rounded-3xl bg-clip-text pl-0 ml-0"> 
             <div className = "flex flex-col items-center mt-3"> 
               <p className = "mt-3 md:mt-35 text-2xl text-white"> &gt; about me </p>
-              <p className = " mb-20 pl-2 pr-2 md:pl-25 md:pr-25 mt-5 md:mt-10 text-neutral-400"> hey, i'm ayan (pronounced i-on), and i'm a twenty-one-year-old rising fourth-year computer science student at the university of virginia! i am double minoring in both data science and english! i previously worked as a <span className =""> devops intern at{" "} 
+              <p className = " mb-20 pl-2 pr-2 md:pl-25 md:pr-25 mt-5 md:mt-10 text-neutral-400"> hey, i'm ayan (pronounced i-on), and i'm a twenty-one-year-old rising fourth-year computer science student at the university of virginia! i am double minoring in both data science and english. i previously worked as a <span className =""> devops intern at{" "} 
                 <LinkPreview url="https://www.fanniemae.com/" 
               isStatic={false} className="text-white" width={150} height={80}> fannie mae<span className = "text-neutral-400">,</span></LinkPreview>{" "}
 
@@ -35,7 +35,7 @@ const About = () => {
               <br></br>
               asides programming, my hobbies consist of digital art, sewing, graphic design, cutting hair, listening to live music (huge fan of dc emo/hardcore and some goth rock), and playing video games. i am extremely passionate about centering accessiblity within all my projects and volunteer work. feel free to reach out to me at&nbsp;<LinkPreview url="mailto:ayanfairfax@gmail.com" imageSrc = {email}
               isStatic={true} className="text-white" width={20} height={20}> <span className ="text-white"> <span> </span>ayanfairfax@gmail.com</span> </LinkPreview>{" "}
-              for any questions or inquiries, or reach me at my other socials at the bottom of the page.
+              for any questions or inquiries, or any of my other socials at the bottom of the page.
               </p>
             </div>
            </div>
