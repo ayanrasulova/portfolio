@@ -85,15 +85,9 @@ const HeroText = () => {
 
             {/* mobile */}
             <div className ="padded-box flex flex-col items-center text-center mt-5 space-y-0.3 md:hidden"> {/* c-space */}
-                <FuzzyText className = "scale-200 mt-50"
-                    fontSize="clamp(3rem, 14vw, 5rem)"
-                    fontWeight={700}
-                    fps={30}
-                    baseIntensity={0.05}
-                    hoverIntensity={0.1}
-                    >
+                <h1 className="mt-50 text-5xl font-bold tracking-tight text-white">
                     hi, i'm ayan
-                </FuzzyText>
+                </h1>
 
                 <div className = "flex flex-col pt-3 items-center"> 
 
