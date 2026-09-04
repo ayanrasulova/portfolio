@@ -56,7 +56,7 @@ const HeroText = () => {
 
 
             {/* desktop */}
-            <div className = "mt-50 flex-col justify-center hidden items-center md:flex md:px-15 lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
+            <div className = "mt-50 flex-col justify-center hidden items-center lg:flex lg:px-15 "> {/* not using c-space so left aligned, justify start + padding on larger screens */}
   
                 <FuzzyText 
                     baseIntensity={0.06}
@@ -84,7 +84,7 @@ const HeroText = () => {
 
 
             {/* mobile */}
-            <div className ="padded-box flex flex-col items-center text-center mt-5 space-y-0.3 md:hidden"> {/* c-space */}
+            <div className ="padded-box flex flex-col items-center text-center mt-5 space-y-0.3 lg:hidden"> {/* c-space */}
                 <h1 className="mt-50 text-5xl font-bold tracking-tight text-white">
                     hi, i'm ayan
                 </h1>
